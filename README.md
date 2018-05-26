@@ -1,3 +1,8 @@
 # My Awesome Book
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+官网：https://grin-tech.org/
+
+源代码：https://github.com/mimblewimble/grin
+
+
+
