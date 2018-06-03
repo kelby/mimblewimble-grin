@@ -6,17 +6,13 @@
 
 **3 个服务：**
 
-chain::Chain
+chain::Chain 链
 
-p2p::Peers
+p2p::Peers 节点
 
-pool::TransactionPool
-
-
+pool::TransactionPool 交易池
 
 **信息包括：**
-
-
 
 blocks
 
