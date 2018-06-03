@@ -7,12 +7,12 @@
   * [链](chapter1/lian.md)
   * 交易池
   * 输入
-  * 输出
-* [API、客户端](api3001-ke-hu-duan.md)
+  * [输出](chapter1/shu-chu.md)
+* [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
 * [网络传输](wang-luo-chuan-shu.md)
 * [数据存储](shu-ju-cun-chu.md)
-* [数学、密码学](shu-xue-3001-mi-ma-xue.md)
+* [数学/密码学](shu-xue-3001-mi-ma-xue.md)
 * [三层设计](san-ceng-she-ji.md)
 
