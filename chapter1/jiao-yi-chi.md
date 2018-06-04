@@ -2,5 +2,7 @@
 
 TransactionPool &gt; Pool &gt; PoolEntry &gt; TxSource & Transaction
 
+元数据+其它关联对象
+
 
 
