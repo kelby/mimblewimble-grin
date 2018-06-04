@@ -1,12 +1,18 @@
-**BlockHeader** 区块头
+## **BlockHeader** 区块头
 
+## **CompactBlock** 压缩区块
 
+区块头
 
-**CompactBlock** 压缩区块
+nonce
 
+Output
 
+TxKernel
 
-**Block** 区块
+ShortId
+
+## **Block** 区块
 
 
 
