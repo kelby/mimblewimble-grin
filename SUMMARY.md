@@ -5,7 +5,7 @@
   * [区块](chapter1/xxx.md)
   * [交易](chapter1/jiao-yi.md)
   * [链](chapter1/lian.md)
-  * 交易池
+  * [交易池](chapter1/jiao-yi-chi.md)
   * 输入
   * [输出](chapter1/shu-chu.md)
   * [孤儿块](chapter1/gu-er-kuai.md)
