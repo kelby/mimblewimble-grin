@@ -14,5 +14,13 @@ ShortId
 
 ## **Block** 区块
 
+BlockHeader
+
+Input
+
+Output
+
+TxKernel
+
 
 
