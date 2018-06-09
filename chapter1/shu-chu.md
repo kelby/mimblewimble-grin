@@ -4,8 +4,6 @@ Commitment
 
 RangeProof
 
-
-
 当前，输出主要包含：
 
 An output consists of -
