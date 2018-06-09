@@ -56,5 +56,10 @@ Commit(x, r1) + Commit(y, r2) = Commit(x + y, r1 + r2)
 Commit(x,r) + n = Commit(x + n,r)
 ```
 
+All outputs include a Pedersen commitment of the form`r*G + v*H`with`r`the blinding factor,`v`the value, and G and H two distinct generator points on the same curve group.
+
+## 
+
+  
 
 
