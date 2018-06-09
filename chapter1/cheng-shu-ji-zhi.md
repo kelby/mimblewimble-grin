@@ -1,8 +1,6 @@
-
+Coinbase outputs \(block rewards & fees\) are "locked" and require 1,000 confirmations \(blocks added to the current chain\) before they mature sufficiently to be spendable.
 
 ## Timelocked Transactions
-
-
 
 A transaction can be time-locked with a few simple modifications:
 
