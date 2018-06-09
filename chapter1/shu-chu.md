@@ -12,5 +12,10 @@ An output consists of -
 * commitment`rG+vH`
 * rangeproof
 
+To spend an output we continue to need -
+
+* `r`and`v`to build the commitment and to prove ownership
+
+  
 
 
