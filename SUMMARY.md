@@ -13,6 +13,7 @@
   * [PoW](chapter1/pow.md)
   * [余额](chapter1/yu-e.md)
   * [transaction kernel](chapter1/transaction-kernel.md)
+  * [成熟机制](chapter1/cheng-shu-ji-zhi.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
