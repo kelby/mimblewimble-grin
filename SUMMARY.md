@@ -20,5 +20,6 @@
 * [数据存储](shu-ju-cun-chu.md)
 * [数学/密码学](shu-xue-3001-mi-ma-xue.md)
   * [Pedersen Commitment](shu-xue-3001-mi-ma-xue/pedersen-commitment.md)
+  * [RangeProof](shu-xue-3001-mi-ma-xue/rangeproof.md)
 * [三层设计](san-ceng-she-ji.md)
 
