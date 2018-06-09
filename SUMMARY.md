@@ -21,5 +21,6 @@
 * [数学/密码学](shu-xue-3001-mi-ma-xue.md)
   * [Pedersen Commitment](shu-xue-3001-mi-ma-xue/pedersen-commitment.md)
   * [RangeProof](shu-xue-3001-mi-ma-xue/rangeproof.md)
+  * [Aggregate Signatures](shu-xue-3001-mi-ma-xue/aggregate-signatures.md)
 * [三层设计](san-ceng-she-ji.md)
 
