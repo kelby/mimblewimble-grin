@@ -46,6 +46,5 @@ TxKernel
   * The signatures generated using the excess value.
   * The mining fee.
 
-  
 
 
