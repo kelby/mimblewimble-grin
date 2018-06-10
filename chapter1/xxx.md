@@ -36,3 +36,16 @@ Output
 
 TxKernel
 
+## A block is simply built from:
+
+* A block header.
+* The list of inputs remaining after cut-through.
+* The list of outputs remaining after cut-through.
+* The transaction kernels containing, for each transaction:
+  * The public key`r*G`obtained from the summation of all the commitments.
+  * The signatures generated using the excess value.
+  * The mining fee.
+
+  
+
+
