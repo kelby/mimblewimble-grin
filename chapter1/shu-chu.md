@@ -1,10 +1,8 @@
-OutputFeatures
+OutputFeatures \# 来源标记
 
-Commitment
+Commitment \# 见证（输出金额）
 
-RangeProof
-
-当前，输出主要包含：
+RangeProof \# 见证所涉及的金额没有负数
 
 ## An output consists of -
 
