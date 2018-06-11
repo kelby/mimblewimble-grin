@@ -1,10 +1,10 @@
-OutputFeatures
+OutputFeatures \# 来源标记。来自普通交易，还是 Coinbase？根据来源不同，成熟时间不同。
 
-Commitment
+Commitment \# 之前输出的 Commitment
 
-block\_hash
+block\_hash \# 之前的输出来源于哪个块？
 
-MerkleProof
+MerkleProof \# 证明之前存在且本块其它交易未花费（这里是第一次使用）
 
 ## An input must provide -
 
