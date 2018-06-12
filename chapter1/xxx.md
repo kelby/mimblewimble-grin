@@ -12,8 +12,6 @@ kernel\_root: Hash\# 根据下面所有的 TxHashSet 而来
 
 total\_kernel\_offset: BlindingFactor \# 从创世区块到当前的 kernel offsets
 
-pow: Proof
-
 ## **CompactBlock** 压缩区块
 
 区块头
