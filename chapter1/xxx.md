@@ -46,7 +46,7 @@ TxKernel
   * The signatures generated using the excess value.
   * The mining fee.
 
-## validate
+## validate 区块校验
 
 verify\_weight
 
@@ -60,7 +60,11 @@ verify\_inputs
 
 verify\_kernel\_lock\_heights
 
+verify\_kernel\_sums
 
+verify\_rangeproofs
+
+verify\_kernel\_signatures
 
 
 
