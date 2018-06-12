@@ -22,7 +22,7 @@ Output
 
 TxKernel
 
-ShortId
+ShortId \# 一个标识
 
 ## **Block** 区块
 
@@ -33,6 +33,8 @@ Input
 Output
 
 TxKernel
+
+注意：区块头保存的是这几者的 Merklish root, 而这里是关联着具体的实例。
 
 ## A block is simply built from:
 
