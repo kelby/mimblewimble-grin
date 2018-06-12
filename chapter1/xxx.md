@@ -4,13 +4,13 @@
 
 比较特殊的有：
 
-output\_root: Hash
+output\_root: Hash \# 根据下面所有的 TxHashSet 而来
 
-range\_proof\_root: Hash
+range\_proof\_root: Hash\# 根据下面所有的 TxHashSet 而来
 
-kernel\_root: Hash
+kernel\_root: Hash\# 根据下面所有的 TxHashSet 而来
 
-total\_kernel\_offset: BlindingFactor
+total\_kernel\_offset: BlindingFactor \# 从创世区块到当前的 kernel offsets
 
 pow: Proof
 
