@@ -34,7 +34,7 @@ Output
 
 TxKernel
 
-注意：区块头保存的是这几者的 Merklish root, 而这里是关联着具体的实例。
+注意：区块头保存的是这几者的 Merklish root, 而这里是关联着具体的实体。
 
 ## A block is simply built from:
 
@@ -45,6 +45,22 @@ TxKernel
   * The public key`r*G`obtained from the summation of all the commitments.
   * The signatures generated using the excess value.
   * The mining fee.
+
+## validate
+
+verify\_weight
+
+verify\_sorted
+
+verify\_cut\_through
+
+verify\_coinbase
+
+verify\_inputs
+
+verify\_kernel\_lock\_heights
+
+
 
 
 
