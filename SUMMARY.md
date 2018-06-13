@@ -9,7 +9,7 @@
   * [输入](chapter1/shu-ru.md)
   * [输出](chapter1/shu-chu.md)
   * [孤儿块](chapter1/gu-er-kuai.md)
-  * [难度](chapter1/nan-du.md)
+  * [难度 Difficulty](chapter1/nan-du.md)
   * [PoW](chapter1/pow.md)
   * [余额](chapter1/yu-e.md)
   * [transaction kernel](chapter1/transaction-kernel.md)
