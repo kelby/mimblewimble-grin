@@ -66,5 +66,11 @@ verify\_rangeproofs
 
 verify\_kernel\_signatures
 
+## 特殊区块\(最简单的区块\)
+
+创世区块
+
+
+
 
 
