@@ -24,6 +24,8 @@ TxKernel
 
 ShortId \# 一个标识
 
+对比标准的区块，把“输入”去掉了，多了唯一标识 ShortId
+
 ## **Block** 区块
 
 BlockHeader
