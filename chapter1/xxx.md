@@ -12,20 +12,6 @@ kernel\_root: Hash\# 根据下面所有的 TxHashSet 而来
 
 total\_kernel\_offset: BlindingFactor \# 从创世区块到当前的 kernel offsets
 
-## **CompactBlock** 压缩区块
-
-区块头
-
-nonce
-
-Output
-
-TxKernel
-
-ShortId \# 一个标识
-
-对比标准的区块，把“输入”去掉了，多了唯一标识 ShortId
-
 ## **Block** 区块
 
 BlockHeader
@@ -47,6 +33,20 @@ TxKernel
   * The public key`r*G`obtained from the summation of all the commitments.
   * The signatures generated using the excess value.
   * The mining fee.
+
+## **CompactBlock** 压缩区块
+
+区块头
+
+nonce
+
+Output
+
+TxKernel
+
+ShortId \# 一个标识
+
+对比标准的区块，把“输入”去掉了，多了唯一标识 ShortId
 
 ## validate 区块校验
 
