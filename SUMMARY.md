@@ -18,6 +18,7 @@
   * [Merkle Structures](chapter1/merkle-structures.md)
   * [pruning](chapter1/pruning.md)
   * [TxHashSet](chapter1/txhashset.md)
+  * [证明 Proof](chapter1/zheng-ming-proof.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
