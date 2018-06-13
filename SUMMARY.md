@@ -30,5 +30,6 @@
   * [Elliptic Curve Cryptography \(ECC\)](shu-xue-3001-mi-ma-xue/elliptic-curve-cryptography-ecc.md)
   * [Confidential Transactions](shu-xue-3001-mi-ma-xue/confidential-transactions.md)
   * blinding factor
+  * [SipHash](shu-xue-3001-mi-ma-xue/siphash.md)
 * [三层设计](san-ceng-she-ji.md)
 
