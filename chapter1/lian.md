@@ -28,7 +28,5 @@ txhashset txhashset::TxHashSet
 
 “元数据”这部分不是很重要，主要是对其“关联对象”的处理。如：OrphanBlockPool、ChainStore、TxHashSet 等。
 
-“链”很重要，又不重要。
-
-
+“链”是大脑、是协调者。协调下面的“软件”的多个模块，让它们协作起来。
 
