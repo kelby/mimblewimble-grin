@@ -21,3 +21,11 @@ To sign a message,{\displaystyle M}![](https://wikimedia.org/api/rest_v1/media/m
 
 The signature is the pair,{\displaystyle \(s,e\)}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/0bf13ceb863a186059314683df30eec27cd9ff2b "{\displaystyle \(s,e\)}").
 
+## EdDSA
+
+门罗币实际使用的是 EdDSA
+
+Edwards-curve Digital Signature Algorithm \(EdDSA\) is a digital signature scheme using a variant of Schnorr signature based on Twisted Edwards curves.
+
+
+
