@@ -33,5 +33,6 @@
   * [blinding factor](shu-xue-3001-mi-ma-xue/blinding-factor.md)
   * [SipHash](shu-xue-3001-mi-ma-xue/siphash.md)
   * [Schnorr signature](shu-xue-3001-mi-ma-xue/schnorr-signature.md)
+  * [BLAKE2](shu-xue-3001-mi-ma-xue/blake2.md)
 * [三层设计](san-ceng-she-ji.md)
 
