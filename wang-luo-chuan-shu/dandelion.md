@@ -16,6 +16,8 @@ stem - 茎
 
 fluff - 叶
 
+> “在茎阶段，每个节点把交易传递到单个节点。一个随机数沿着茎传递，交易进入叶阶段，类似于一般交易信息的集中扩散。甚至当攻击者可以识别叶阶段的地址，也很难识别茎的来源”。
+
 Dandelion transaction propagation proceeds in two phases: first the “stem” phase, and then “fluff” phase. During the stem phase, each node relays the transaction to a\_single\_peer. After a random number of hops along the stem, the transaction enters the fluff phase, which behaves just like ordinary flooding/diffusion. Even when an attacker can identify the location of the fluff phase, it is much more difficult to identify the source of the stem.
 
 Illustration:
