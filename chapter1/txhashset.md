@@ -8,3 +8,7 @@ commit\_index ChainStore
 
 
 
+主要是 3 个哈希的集合。
+
+
+
