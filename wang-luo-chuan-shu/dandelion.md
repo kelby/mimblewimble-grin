@@ -2,6 +2,8 @@
 
 关键词：隐私保护。一石二鸟
 
+尚未实现
+
 1、隐藏 IP
 
 Dandelion is a new transaction broadcasting mechanism that reduces the risk of eavesdroppers linking transactions to the source IP.
