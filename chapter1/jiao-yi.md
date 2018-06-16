@@ -41,5 +41,11 @@ Possession of private keys. 确保私钥的拥有者才能发起交易。
 
 备注：这里的签名，包含了见证（不拆分，方便理解）。
 
+## 运用
+
+build\_input
+
+
+
 
 
