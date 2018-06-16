@@ -43,9 +43,11 @@ Possession of private keys. 确保私钥的拥有者才能发起交易。
 
 ## 运用
 
-build\_input
+聚合签名（数学、密码学）
 
+构建交易（核心业务）
 
+证明（Proof）
 
-
+Slate（核心业务。用于构建交易所需的公开数据）
 
