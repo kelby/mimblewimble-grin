@@ -41,13 +41,13 @@ The signature can be checked using the public key`x*G`, re-calculating`e`using M
 
 ```
 s*G = k*G + e * x*G
-
 ```
 
 In this simple case of someone sending a transaction to a receiver they trust \(see later for the trustless case\), an aggregate signature can be directly built for a Grin transaction by calculating the total blinding factor of inputs and outputs`r`and using it as the private key`x`above. The resulting kernel is assembled from the aggregate signature generated using`r`and the public key`r*G`, and allows to verify non-inflation for all Grin transactions \(and signs the fees\).
 
-Because these signatures are built simply from a scalar and a public key, they can be used to construct a variety of contracts using "simple" arithmetic.  
+Because these signatures are built simply from a scalar and a public key, they can be used to construct a variety of contracts using "simple" arithmetic.
 
+## 步骤
 
-
+公钥加密，私钥签名，最终签名。
 
