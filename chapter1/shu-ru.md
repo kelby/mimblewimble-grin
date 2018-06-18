@@ -1,3 +1,5 @@
+## A reference to an output being spent by a transaction.
+
 OutputFeatures \# 来源标记。来自普通交易，还是 Coinbase？根据来源不同，成熟时间不同。
 
 Commitment \# 之前输出的 Commitment
