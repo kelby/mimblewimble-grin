@@ -26,6 +26,8 @@
   * [公钥、私钥、地址](api3001-ke-hu-duan/gong-yao-3001-si-yao-3001-di-zhi.md)
   * [加密、签名](api3001-ke-hu-duan/jia-mi-3001-qian-ming.md)
   * 交易
+  * WalletSeed
+  * FileWallet
 * [网络传输](wang-luo-chuan-shu.md)
   * [Dandelion](wang-luo-chuan-shu/dandelion.md)
   * [P2P](wang-luo-chuan-shu/p2p.md)
