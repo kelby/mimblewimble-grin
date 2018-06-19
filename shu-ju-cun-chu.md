@@ -44,8 +44,3 @@ The grin blockchain includes the following types of data:
 
 
 
-  
-
-
-
-
