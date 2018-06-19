@@ -15,5 +15,9 @@ A better compressed bitset
 
 Roaring bitmaps are compressed bitmaps. They can be hundreds of times faster.
 
+## rust wrapper for rocksdb
+
+RocksDB is an embeddable persistent key-value store for fast storage.
+
 
 
