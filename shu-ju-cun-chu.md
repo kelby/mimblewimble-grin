@@ -1,3 +1,5 @@
+An implementation of the ChainStore trait backed by a simple key-value store.
+
 ## grin\_chain store
 
 相当于 ORM
