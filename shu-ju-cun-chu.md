@@ -27,5 +27,9 @@ Bitsets，也称为位图，通常用作快速数据结构。
 
 RocksDB is an embeddable persistent key-value store for fast storage.
 
+> 其它：PMMR，是 MerkleProof PMMR PruneList 的缩写形式。
+
+
+
 
 
