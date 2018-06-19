@@ -15,9 +15,11 @@ A better compressed bitset
 
 Roaring bitmaps are compressed bitmaps. They can be hundreds of times faster.
 
+带有完全支持编译器\( GNU，llvm，Visual Studio \)的\( 还有 C++ \) 中的便携式Roaring位图。
+
+Bitsets，也称为位图，通常用作快速数据结构。
+
 ## rust wrapper for rocksdb
 
 RocksDB is an embeddable persistent key-value store for fast storage.
-
-
 
