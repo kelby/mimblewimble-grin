@@ -2,7 +2,7 @@ An implementation of the ChainStore trait backed by a simple key-value store.
 
 ## grin\_chain store
 
-相当于 ORM
+业务封装，与具体数据库无关，相当于 ORM
 
 The full state of a Grin chain consists of all the following data:
 
@@ -23,5 +23,9 @@ Bitsets，也称为位图，通常用作快速数据结构。
 
 ## rust wrapper for rocksdb
 
+具体使用数据库。
+
 RocksDB is an embeddable persistent key-value store for fast storage.
+
+
 
