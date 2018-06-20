@@ -20,7 +20,7 @@ Verification of zero sums. 输入与输出之差为0，不能额外产生或者�
 
 Possession of private keys. 确保私钥的拥有者才能发起交易。
 
-## A Grin transaction consists of the following -
+## A Grin transaction consists of the following
 
 * A set of inputs, each referencing a previous output being spent.
 * A set of new outputs that include -
