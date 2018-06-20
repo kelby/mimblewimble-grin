@@ -36,8 +36,8 @@
   * [Dandelion](wang-luo-chuan-shu/dandelion.md)
   * [P2P](wang-luo-chuan-shu/p2p.md)
 * [数据存储](shu-ju-cun-chu.md)
-  * DB
-  * ORM
+  * [DB](shu-ju-cun-chu/db.md)
+  * [ORM](shu-ju-cun-chu/orm.md)
 * [数学/密码学](shu-xue-3001-mi-ma-xue.md)
   * [Pedersen Commitment](shu-xue-3001-mi-ma-xue/pedersen-commitment.md)
   * [RangeProof](shu-xue-3001-mi-ma-xue/rangeproof.md)
