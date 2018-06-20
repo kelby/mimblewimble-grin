@@ -42,5 +42,4 @@
 * [数据存储](shu-ju-cun-chu.md)
   * [DB](shu-ju-cun-chu/db.md)
   * [ORM](shu-ju-cun-chu/orm.md)
-* [设计理念](she-ji-li-nian.md)
 
