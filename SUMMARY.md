@@ -25,9 +25,9 @@
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
   * [公钥、私钥、地址](api3001-ke-hu-duan/gong-yao-3001-si-yao-3001-di-zhi.md)
   * [加密、签名](api3001-ke-hu-duan/jia-mi-3001-qian-ming.md)
-  * 交易
-  * WalletSeed
-  * FileWallet
+  * [交易](api3001-ke-hu-duan/jiao-yi.md)
+  * [WalletSeed](api3001-ke-hu-duan/walletseed.md)
+  * [FileWallet](api3001-ke-hu-duan/filewallet.md)
 * [网络传输](wang-luo-chuan-shu.md)
   * [Dandelion](wang-luo-chuan-shu/dandelion.md)
   * [P2P](wang-luo-chuan-shu/p2p.md)
