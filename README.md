@@ -4,11 +4,13 @@
 
 让你阅读自己，聆听世界。
 
-# My Awesome Book
+# MimbleWimble Grin
 
 官网：[https://grin-tech.org/](https://grin-tech.org/)
 
 源代码：[https://github.com/mimblewimble/grin](https://github.com/mimblewimble/grin)
+
+作者微信号：zzkklee
 
 ## 架构
 
@@ -23,6 +25,4 @@ API/客户端（通过RPC交互）
 数据存储（运用数据库，保存、管理数据）
 
 数学/密码学
-
-
 
