@@ -23,6 +23,7 @@
   * [手续费](chapter1/shou-xu-fei.md)
   * [奖励](chapter1/jiang-li.md)
   * [发行曲线](chapter1/fa-xing-qu-xian.md)
+  * [出块时间](chapter1/chu-kuai-shi-jian.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
