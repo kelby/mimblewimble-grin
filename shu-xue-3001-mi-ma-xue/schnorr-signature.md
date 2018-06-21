@@ -32,9 +32,28 @@ The signature is the pair,{\displaystyle \(s,e\)}![](https://wikimedia.org/api/r
 
 结果由上述个步骤组两部分\(加密结果, 签名结果\)，称之为“签名（名词）”
 
+### Verifying
+
+* Let
+  {\displaystyle r\_{v}=g^{s}y^{e}}
+  ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/efe28cb691665238f37826576e40b4d60360bc67 "r\_{v}=g^{s}y^{e}")
+* Let
+  {\displaystyle e\_{v}=H\(r\_{v}\parallel M\)}
+  ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/76d9ecdb41f28f61799fdf7151ed1da18e373100 "{\displaystyle e\_{v}=H\(r\_{v}\parallel M\)}")
+
+If{\displaystyle e\_{v}=e}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/b435bf8daf143afe11896063ea6573a8749c4bf6 "e\_{v}=e")then the signature is verified.
+
+### Proof of correctness
+
+It is relatively easy to see that{\displaystyle e\_{v}=e}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/b435bf8daf143afe11896063ea6573a8749c4bf6 "e\_{v}=e")if the signed message equals the verified message:
+
+{\displaystyle r\_{v}=g^{s}y^{e}=g^{k-xe}g^{xe}=g^{k}=r}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/f935ad3fa54c3436d2406314571514afe5d5346c "r\_{v}=g^{s}y^{e}=g^{{k-xe}}g^{{xe}}=g^{k}=r"), and hence{\displaystyle e\_{v}=H\(r\_{v}\parallel M\)=H\(r\parallel M\)=e}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/f4b967799e69b1478ab53de05acc468f61e217e8 "{\displaystyle e\_{v}=H\(r\_{v}\parallel M\)=H\(r\parallel M\)=e}").
+
+Public elements:{\displaystyle G}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/f5f3c8921a3b352de45446a6789b104458c9f90b "G"),{\displaystyle g}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d3556280e66fe2c0d0140df20935a6f057381d77 "g"),{\displaystyle q}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/06809d64fa7c817ffc7e323f85997f783dbdf71d "q"),{\displaystyle y}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/b8a6208ec717213d4317e666f1ae872e00620a0d "y"),{\displaystyle s}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/01d131dfd7673938b947072a13a9744fe997e632 "s"),{\displaystyle e}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/cd253103f0876afc68ebead27a5aa9867d927467 "e"),{\displaystyle r}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/0d1ecb613aa2984f0576f70f86650b7c2a132538 "r"). Private elements:{\displaystyle k}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40 "k"),{\displaystyle x}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4 "x").
+
 ## EdDSA
 
- 门罗币实际使用的是 EdDSA
+门罗币实际使用的是 EdDSA
 
 Edwards-curve Digital Signature Algorithm \(EdDSA\) is a digital signature scheme using a variant of Schnorr signature based on Twisted Edwards curves.
 
