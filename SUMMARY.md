@@ -28,6 +28,7 @@
   * [奖励](chapter1/jiang-li.md)
   * [发行曲线](chapter1/fa-xing-qu-xian.md)
   * [出块时间](chapter1/chu-kuai-shi-jian.md)
+  * [PMMR](chapter1/pmmr.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
@@ -42,7 +43,6 @@
 * [数据存储](shu-ju-cun-chu.md)
   * [DB](shu-ju-cun-chu/db.md)
   * [ORM](shu-ju-cun-chu/orm.md)
-
 * [数学/密码学](shu-xue-3001-mi-ma-xue.md)
   * [Pedersen Commitment](shu-xue-3001-mi-ma-xue/pedersen-commitment.md)
   * [RangeProof](shu-xue-3001-mi-ma-xue/rangeproof.md)
@@ -54,3 +54,4 @@
   * [Schnorr signature](shu-xue-3001-mi-ma-xue/schnorr-signature.md)
   * [BLAKE2](shu-xue-3001-mi-ma-xue/blake2.md)
   * [Merkle Tree](shu-xue-3001-mi-ma-xue/merkle-tree.md)
+
