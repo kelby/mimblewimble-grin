@@ -50,7 +50,7 @@ ShortId \# 一个标识
 
 对比标准的区块，把“输入”去掉了，多了唯一标识 ShortId
 
-## validate 区块校验
+## 重要操作：validate 区块校验
 
 verify\_weight
 
@@ -73,4 +73,14 @@ verify\_kernel\_signatures
 ## 特殊区块\(最简单的区块\)
 
 创世区块
+
+## 重要操作：修剪
+
+cut\_through
+
+
+
+
+
+
 
