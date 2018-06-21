@@ -29,6 +29,10 @@
   * [发行曲线](chapter1/fa-xing-qu-xian.md)
   * [出块时间](chapter1/chu-kuai-shi-jian.md)
   * [PMMR](chapter1/pmmr.md)
+  * core
+  * chain
+  * pow
+  * pool
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
@@ -37,12 +41,20 @@
   * [交易](api3001-ke-hu-duan/jiao-yi.md)
   * [WalletSeed](api3001-ke-hu-duan/walletseed.md)
   * [FileWallet](api3001-ke-hu-duan/filewallet.md)
+  * api
+  * grin
+  * mining
+  * wallet
+  * libtx
+  * libwallet
 * [网络传输](wang-luo-chuan-shu.md)
   * [Dandelion](wang-luo-chuan-shu/dandelion.md)
   * [P2P](wang-luo-chuan-shu/p2p.md)
+  * p2p
 * [数据存储](shu-ju-cun-chu.md)
   * [DB](shu-ju-cun-chu/db.md)
   * [ORM](shu-ju-cun-chu/orm.md)
+  * store
 * [数学/密码学](shu-xue-3001-mi-ma-xue.md)
   * [Pedersen Commitment](shu-xue-3001-mi-ma-xue/pedersen-commitment.md)
   * [RangeProof](shu-xue-3001-mi-ma-xue/rangeproof.md)
@@ -54,4 +66,5 @@
   * [Schnorr signature](shu-xue-3001-mi-ma-xue/schnorr-signature.md)
   * [BLAKE2](shu-xue-3001-mi-ma-xue/blake2.md)
   * [Merkle Tree](shu-xue-3001-mi-ma-xue/merkle-tree.md)
+  * keychain
 
