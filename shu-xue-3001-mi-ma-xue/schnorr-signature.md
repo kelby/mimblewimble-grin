@@ -6,20 +6,20 @@
   , from the allowed set.
 * The public verification key is
   {\displaystyle y=g^{x}}
-  ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/17b22b27d70b22f48d2a943d8a05c5fd5a32a095 "y=g^{x}")
-  .
+  ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/17b22b27d70b22f48d2a943d8a05c5fd5a32a095 "y=g^{x}") \# 公钥、
+  .私钥
 
 ### Signing
 
-To sign a message,{\displaystyle M}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/f82cade9898ced02fdd08712e5f0c0151758a0dd "M"):
+To sign a message,{\displaystyle M}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/f82cade9898ced02fdd08712e5f0c0151758a0dd "M"): \# 原始消息
 
 * Choose a random {\displaystyle k}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40 "k") from the allowed set.
-* Let {\displaystyle r=g^{k}} ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/697f3df97cd0e1b124262f7f27684f43da3959a7 "r=g^{k}")
-  .
-* Let {\displaystyle e=H\(r\parallel M\)}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/38dde48a22ba356e8ed549d28fb43d732f667a04 "{\displaystyle e=H\(r\parallel M\)}"), where{\displaystyle \parallel }![](https://wikimedia.org/api/rest_v1/media/math/render/svg/66ed42f2e3eab99383c61f27773eba258aefeaac "\parallel ")denotes concatenation and {\displaystyle r}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/0d1ecb613aa2984f0576f70f86650b7c2a132538 "r") is represented as a bit string.
-* Let {\displaystyle s=k-xe} ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/892b424a8a5f7e14c82ee68813ce8510a0769042 "{\displaystyle s=k-xe}")
+* Let {\displaystyle r=g^{k}} ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/697f3df97cd0e1b124262f7f27684f43da3959a7 "r=g^{k}") \# 一次性公钥、
+  .私钥
+* Let {\displaystyle e=H\(r\parallel M\)}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/38dde48a22ba356e8ed549d28fb43d732f667a04 "{\displaystyle e=H\(r\parallel M\)}"), where{\displaystyle \parallel }![](https://wikimedia.org/api/rest_v1/media/math/render/svg/66ed42f2e3eab99383c61f27773eba258aefeaac "\parallel ")denotes concatenation and {\displaystyle r}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/0d1ecb613aa2984f0576f70f86650b7c2a132538 "r") is represented as a bit string. \# 加密结果
+* Let {\displaystyle s=k-xe} ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/892b424a8a5f7e14c82ee68813ce8510a0769042 "{\displaystyle s=k-xe}") \# 签名结果
 
-The signature is the pair,{\displaystyle \(s,e\)}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/0bf13ceb863a186059314683df30eec27cd9ff2b "{\displaystyle \(s,e\)}").
+The signature is the pair,{\displaystyle \(s,e\)}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/0bf13ceb863a186059314683df30eec27cd9ff2b "{\displaystyle \(s,e\)}"). \# 最终签名
 
 原始数据为 M
 
@@ -42,6 +42,8 @@ The signature is the pair,{\displaystyle \(s,e\)}![](https://wikimedia.org/api/r
   ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/76d9ecdb41f28f61799fdf7151ed1da18e373100 "{\displaystyle e\_{v}=H\(r\_{v}\parallel M\)}")
 
 If{\displaystyle e\_{v}=e}![](https://wikimedia.org/api/rest_v1/media/math/render/svg/b435bf8daf143afe11896063ea6573a8749c4bf6 "e\_{v}=e")then the signature is verified.
+
+验证：根据公钥、最终签名、原始消息能够重新计算出加密结果。
 
 ### Proof of correctness
 
