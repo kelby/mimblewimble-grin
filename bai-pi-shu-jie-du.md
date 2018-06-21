@@ -17,3 +17,12 @@
 
 [https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.pdf](https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.pdf)
 
+主要涉及：
+
+* 数学、密码学
+* 区块链核心业务
+
+
+
+
+
