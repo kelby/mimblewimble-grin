@@ -27,3 +27,13 @@ pub struct TxKernel {
 
 The excess value is a multisig but it's also a proof that the transaction adds up to zero at the same time.
 
+
+
+## 作用
+
+* 元数据
+* 见证&签名
+* Trust model
+
+
+
