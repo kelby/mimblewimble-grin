@@ -41,7 +41,5 @@ excess\_sig 是签名
 
 excess 是公钥
 
-用的是 secp 算法。
-
-
+用的是 secp 相关算法。
 
