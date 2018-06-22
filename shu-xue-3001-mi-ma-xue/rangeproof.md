@@ -20,5 +20,7 @@ RangeProof rangeProof = HPAKErangeProof.calculateRangeProof(ttpMessage, range);
 HPAKErangeProof.validateRangeProof(rangeProof, ttpMessage.getCommitment(), range);
 ```
 
+Smaller range proofs? Aggregation of range proofs?
+
 
 
