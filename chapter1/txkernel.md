@@ -27,6 +27,12 @@ pub struct TxKernel {
 
 The excess value is a multisig but it's also a proof that the transaction adds up to zero at the same time.
 
+#### excess\_sig
+
+包含了 TxKernel 下面的其它 4 个元素
+
+#### excess
+
 交易有 offset: BlindingFactor，它对应 k = k1 + k2 这里的 k2
 
 excess 对应 k1G
