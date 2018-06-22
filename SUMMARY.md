@@ -5,6 +5,7 @@
 * [设计理念](she-ji-li-nian.md)
   * [Trust model](she-ji-li-nian/trust-model.md)
   * Block verification
+  * Mimblewimble Transactions
 * [架构](jia-gou.md)
 * [三层设计](san-ceng-she-ji.md)
 * [区块链](chapter1.md)
