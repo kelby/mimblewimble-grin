@@ -33,5 +33,15 @@ The excess value is a multisig but it's also a proof that the transaction adds u
 * 见证&签名
 * Trust model
 
+## 验证
+
+fee + lock\_height 是消息
+
+excess\_sig 是签名
+
+excess 是公钥
+
+用的是 secp 算法。
+
 
 
