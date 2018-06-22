@@ -21,13 +21,11 @@ pub struct TxKernel {
     pub excess: Commitment,
     /// The signature proving the excess is a valid public key, which signs
     /// the transaction fee.
-    pub excess_sig: Signature,
+    pub excess_sig: Signature, # 包含了 TxKernel 下面的其它 4 个元素
 }
 ```
 
 The excess value is a multisig but it's also a proof that the transaction adds up to zero at the same time.
-
-
 
 ## 作用
 
