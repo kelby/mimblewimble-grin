@@ -29,6 +29,8 @@ The excess value is a multisig but it's also a proof that the transaction adds u
 
 交易有 offset: BlindingFactor，它对应 k = k1 + k2 这里的 k2
 
+excess 对应 k1G
+
 ## 作用
 
 * 元数据
