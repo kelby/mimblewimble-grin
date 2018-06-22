@@ -51,3 +51,15 @@ Possession of private keys. 确保私钥的拥有者才能发起交易。
 
 Slate（核心业务。用于构建交易所需的公开数据）
 
+## fee
+
+是下面所有 kernels 的手续费（fee）之和
+
+## lock\_height
+
+下面所有 kernels 的被锁高度（lock\_height）取最大值
+
+
+
+
+
