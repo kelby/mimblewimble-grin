@@ -49,5 +49,12 @@ The Dandelion protocol is based on three mechanisms:
 
 3. \_Robust propagation.\_Privacy enhancements should not put transactions at risk of not propagating. To protect against failures \(either malicious or accidental\) where a stem node fails to relay a transaction \(thereby precluding the fluff phase\), each node starts a random timer upon receiving a transaction in stem phase. If the node does not receive any transaction message or block for that transaction before the timer expires, then the node diffuses the transaction normally.
 
+## 实现
+
+主要目的有二：
+
+* 隐藏源IP地址，通过两个状态的切换已经实现；
+* 交易合并，调用 core transaction 的 aggregate 方法也已经实现。
+
 
 
