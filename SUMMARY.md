@@ -35,7 +35,7 @@
   * core
   * chain
   * pow
-  * pool
+  * [pool](chapter1/pool.md)
   * [TxKernel](chapter1/txkernel.md)
   * [BlockHeader](chapter1/blockheader.md)
   * [BlockSums](chapter1/blocksums.md)

@@ -10,11 +10,39 @@
 
 作用主要是管理它们
 
+```rust
+/// Transaction pool implementation.
+pub struct TransactionPool<T> {
+	/// Pool Config
+	pub config: PoolConfig,
+
+	/// Our transaction pool.
+	pub txpool: Pool<T>,
+	/// Our Dandelion "stempool".
+	pub stempool: Pool<T>,
+
+	/// The blockchain
+	pub blockchain: Arc<T>,
+	/// The pool adapter
+	pub adapter: Arc<PoolAdapter>,
+}
+```
+
 #### Pool
 
 主要包含“池子实例”\(PoolEntry\)
 
 作用主要是管理它们
+
+```rust
+pub struct Pool<T> {
+	/// Entries in the pool (tx + info + timer) in simple insertion order.
+	pub entries: Vec<PoolEntry>,
+	/// The blockchain
+	pub blockchain: Arc<T>,
+	pub name: String,
+}
+```
 
 #### PoolEntry
 
