@@ -59,7 +59,19 @@ Slate（核心业务。用于构建交易所需的公开数据）
 
 下面所有 kernels 的被锁高度（lock\_height）取最大值
 
+## 合并
 
+aggregate 已经实现。
+
+inputs
+
+outputs
+
+kernels
+
+kernel\_offsets
+
+有这 4 者基本上就能重新创建一个交易。可以将原来多个交易，合并成一个！
 
 
 
