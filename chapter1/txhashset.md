@@ -10,3 +10,18 @@ commit\_index ChainStore
 
 方便某些情况下管理“交易”。
 
+## Extension
+
+```rust
+/// Allows the application of new blocks on top of the sum trees in a
+/// reversible manner within a unit of work provided by the `extending`
+/// function.
+pub struct Extension<'a> {
+	output_pmmr: PMMR<'a, OutputIdentifier, PMMRBackend<OutputIdentifier>>,
+	rproof_pmmr: PMMR<'a, RangeProof, PMMRBackend<RangeProof>>,
+	kernel_pmmr: PMMR<'a, TxKernel, PMMRBackend<TxKernel>>,
+}
+```
+
+
+
