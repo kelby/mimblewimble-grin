@@ -68,7 +68,7 @@ pub struct PoolEntry {
 }
 ```
 
-状态主要有：stem 和 fluff
+状态主要有：stem 和 fluff，相关知识可查看 Dandelion 协议。
 
 来源主要起标识作用。
 
