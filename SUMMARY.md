@@ -39,6 +39,7 @@
   * [TxKernel](chapter1/txkernel.md)
   * [BlockHeader](chapter1/blockheader.md)
   * [BlockSums](chapter1/blocksums.md)
+  * [其它](chapter1/qi-ta.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
