@@ -48,6 +48,8 @@ pub struct Pool<T> {
 
 除了自身一些数据外，主要是关联着“交易”
 
+交易池相关最小单位，和交易一一对应。
+
 它是被管理者
 
 ```rust
@@ -55,16 +57,22 @@ pub struct Pool<T> {
 /// A single (possibly aggregated) transaction.
 #[derive(Clone, Debug)]
 pub struct PoolEntry {
-	/// The state of the pool entry.
-	pub state: PoolEntryState,
-	/// Info on where this tx originated from.
-	pub src: TxSource,
-	/// Timestamp of when this tx was originally added to the pool.
-	pub tx_at: Timespec,
-	/// The transaction itself.
-	pub tx: Transaction,
+    /// The state of the pool entry.
+    pub state: PoolEntryState,
+    /// Info on where this tx originated from.
+    pub src: TxSource,
+    /// Timestamp of when this tx was originally added to the pool.
+    pub tx_at: Timespec,
+    /// The transaction itself.
+    pub tx: Transaction,
 }
 ```
 
+状态主要有：stem 和 fluff
 
+来源主要起标识作用。
+
+时间戳为交易关联（加入）本 PoolEntry 的时间
+
+交易就是交易
 
