@@ -10,7 +10,6 @@ Just like with Merkle trees, parent nodes in a MMR have for value the hash of th
 
 ```
 Node(l) = Blake2b(n | D)
-
 ```
 
 And for any parent`p`at index`m`:
@@ -18,6 +17,8 @@ And for any parent`p`at index`m`:
 ```
 Node(p) = Blake2b(m | Node(left_child(p)) | Node(right_child(p)))
 ```
+
+
 
 
 
