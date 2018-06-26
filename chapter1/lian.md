@@ -6,6 +6,25 @@
 
 MVC 里一个功能比较综合的“控制器”。
 
+```rust
+/// Facade to the blockchain block processing pipeline and storage. Provides
+/// the current view of the TxHashSet according to the chain state. Also
+/// maintains locking for the pipeline to avoid conflicting processing.
+pub struct Chain {
+	db_root: String,
+	store: Arc<ChainStore>,
+	adapter: Arc<ChainAdapter>,
+
+	head: Arc<Mutex<Tip>>,
+	orphans: Arc<OrphanBlockPool>,
+	txhashset_lock: Arc<Mutex<bool>>,
+	txhashset: Arc<RwLock<txhashset::TxHashSet>>,
+
+	// POW verification function
+	pow_verifier: fn(&BlockHeader, u8) -> bool,
+}
+```
+
 ## 元数据
 
 db\_root String
