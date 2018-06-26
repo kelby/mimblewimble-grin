@@ -8,5 +8,17 @@ A transaction can be time-locked with a few simple modifications:
 * the lock height`h`is included in the transaction kernel
 * a block with a kernel that includes a lock height greater than the current block height is rejected
 
+## 校验
+
+Check we are dealing with the correct block header
+
+Is our Merkle Proof valid? Does node hash up consistently to the root?
+
+Is the root the correct root for the given block header?
+
+Does the hash from the MMR actually match the one in the Merkle Proof?
+
+Finally has the output matured sufficiently now we know the block?
+
 
 
