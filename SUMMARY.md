@@ -60,7 +60,7 @@
 * [数据存储](shu-ju-cun-chu.md)
   * [DB](shu-ju-cun-chu/db.md)
   * [ORM](shu-ju-cun-chu/orm.md)
-  * store
+  * [store](shu-ju-cun-chu/store.md)
 * [数学/密码学](shu-xue-3001-mi-ma-xue.md)
   * [Pedersen Commitment](shu-xue-3001-mi-ma-xue/pedersen-commitment.md)
   * [RangeProof](shu-xue-3001-mi-ma-xue/rangeproof.md)
