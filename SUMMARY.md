@@ -26,7 +26,6 @@
   * [pruning](chapter1/pruning.md)
   * [TxHashSet](chapter1/txhashset.md)
   * [证明 Proof](chapter1/zheng-ming-proof.md)
-  * [BlockContext](chapter1/blockcontext.md)
   * [手续费](chapter1/shou-xu-fei.md)
   * [奖励](chapter1/jiang-li.md)
   * [发行曲线](chapter1/fa-xing-qu-xian.md)

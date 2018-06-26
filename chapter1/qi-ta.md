@@ -23,3 +23,26 @@ pub struct OutputIdentifier {
 
 它是数据结构 TxHashSet 里的一部分。作用也和 TxHashSet 类似，仅是为了方便数据处理，方便开发。并非核心数据结构。
 
+## BlockContext
+
+方便某些情况下管理“区块”
+
+```rust
+/// Contextual information required to process a new block and either reject or
+/// accept it.
+pub struct BlockContext {
+	/// The options
+	pub opts: Options,
+	/// The store
+	pub store: Arc<ChainStore>,
+	/// The head
+	pub head: Tip,
+	/// The POW verification function
+	pub pow_verifier: fn(&BlockHeader, u8) -> bool,
+	/// MMR sum tree states
+	pub txhashset: Arc<RwLock<txhashset::TxHashSet>>,
+}
+```
+
+
+
