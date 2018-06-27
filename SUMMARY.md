@@ -20,7 +20,6 @@
   * [TxKernel](chapter1/txkernel.md)
   * [交易池](chapter1/jiao-yi-chi.md)
   * [难度 Difficulty](chapter1/nan-du.md)
-  * [Tip](chapter1/tip.md)
   * [成熟机制](chapter1/cheng-shu-ji-zhi.md)
   * [cut-through](chapter1/cut-through.md)
   * [Merkle Structures](chapter1/merkle-structures.md)
