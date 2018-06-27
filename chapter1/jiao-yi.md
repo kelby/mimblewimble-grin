@@ -1,16 +1,32 @@
-## Input（输入）
+```rust
+/// A transaction
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct Transaction {
+	/// List of inputs spent by the transaction.
+	pub inputs: Vec<Input>,
+	/// List of outputs the transaction produces.
+	pub outputs: Vec<Output>,
+	/// List of kernels that make up this transaction (usually a single kernel).
+	pub kernels: Vec<TxKernel>,
+	/// The kernel "offset" k2
+	/// excess is k1G after splitting the key k = k1 + k2
+	pub offset: BlindingFactor,
+}
+```
+
+#### Input（输入）
 
 List of inputs spent by the transaction.
 
-## Output（输出）
+#### Output（输出）
 
 List of outputs the transaction produces.
 
-## TxKernel（元数据 + 签名）
+#### TxKernel（元数据 + 签名）
 
 List of kernels that make up this transaction \(usually a single kernel\).
 
-## BlindingFactor（额外数据）
+#### BlindingFactor（额外数据）
 
 The kernel "offset" k2 excess is k1G after splitting the key k = k1 + k2
 
