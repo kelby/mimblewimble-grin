@@ -31,18 +31,30 @@ pub struct OutputIdentifier {
 /// Contextual information required to process a new block and either reject or
 /// accept it.
 pub struct BlockContext {
-	/// The options
-	pub opts: Options,
-	/// The store
-	pub store: Arc<ChainStore>,
-	/// The head
-	pub head: Tip,
-	/// The POW verification function
-	pub pow_verifier: fn(&BlockHeader, u8) -> bool,
-	/// MMR sum tree states
-	pub txhashset: Arc<RwLock<txhashset::TxHashSet>>,
+    /// The options
+    pub opts: Options,
+    /// The store
+    pub store: Arc<ChainStore>,
+    /// The head
+    pub head: Tip,
+    /// The POW verification function
+    pub pow_verifier: fn(&BlockHeader, u8) -> bool,
+    /// MMR sum tree states
+    pub txhashset: Arc<RwLock<txhashset::TxHashSet>>,
 }
 ```
+
+## Committed
+
+/// Implemented by types that hold inputs and outputs \(and kernels\)
+
+/// containing Pedersen commitments.
+
+/// Handles the collection of the commitments as well as their
+
+/// summing, taking potential explicit overages of fees into account.
+
+
 
 
 
