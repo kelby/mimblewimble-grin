@@ -58,17 +58,17 @@ txhashset txhashset::TxHashSet
 compact
 
 ```rust
-	/// Triggers chain compaction, cleaning up some unnecessary historical
-	/// information. We introduce a chain depth called horizon, which is
-	/// typically in the range of a couple days. Before that horizon, this
-	/// method will:
-	///
-	/// * compact the MMRs data files and flushing the corresponding remove logs
-	/// * delete old records from the k/v store (older blocks, indexes, etc.)
-	///
-	/// This operation can be resource intensive and takes some time to execute.
-	/// Meanwhile, the chain will not be able to accept new blocks. It should
-	/// therefore be called judiciously.
+    /// Triggers chain compaction, cleaning up some unnecessary historical
+    /// information. We introduce a chain depth called horizon, which is
+    /// typically in the range of a couple days. Before that horizon, this
+    /// method will:
+    ///
+    /// * compact the MMRs data files and flushing the corresponding remove logs
+    /// * delete old records from the k/v store (older blocks, indexes, etc.)
+    ///
+    /// This operation can be resource intensive and takes some time to execute.
+    /// Meanwhile, the chain will not be able to accept new blocks. It should
+    /// therefore be called judiciously.
 ```
 
 
