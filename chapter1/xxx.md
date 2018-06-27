@@ -63,15 +63,15 @@ TxKernel
 /// additive to the total of fees ever collected.
 #[derive(Debug, Clone)]
 pub struct Block {
-	/// The header with metadata and commitments to the rest of the data
-	pub header: BlockHeader,
-	/// List of transaction inputs
-	pub inputs: Vec<Input>,
-	/// List of transaction outputs
-	pub outputs: Vec<Output>,
-	/// List of kernels with associated proofs (note these are offset from
-	/// tx_kernels)
-	pub kernels: Vec<TxKernel>,
+    /// The header with metadata and commitments to the rest of the data
+    pub header: BlockHeader,
+    /// List of transaction inputs
+    pub inputs: Vec<Input>,
+    /// List of transaction outputs
+    pub outputs: Vec<Output>,
+    /// List of kernels with associated proofs (note these are offset from
+    /// tx_kernels)
+    pub kernels: Vec<TxKernel>,
 }
 ```
 
@@ -174,4 +174,18 @@ verify\_kernel\_signatures
 ## 重要操作：修剪
 
 cut\_through
+
+```rust
+	/// Matches any output with a potential spending input, eliminating them
+	/// from the block. Provides a simple way to cut-through the block. The
+	/// elimination is stable with respect to the order of inputs and outputs.
+	/// Method consumes the block.
+	///
+	/// NOTE: exclude coinbase from cut-through process
+	/// if a block contains a new coinbase output and
+	/// is a transaction spending a previous coinbase
+	/// we do not want to cut-through (all coinbase must be preserved)
+```
+
+
 
