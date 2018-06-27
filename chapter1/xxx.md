@@ -176,15 +176,15 @@ verify\_kernel\_signatures
 cut\_through
 
 ```rust
-	/// Matches any output with a potential spending input, eliminating them
-	/// from the block. Provides a simple way to cut-through the block. The
-	/// elimination is stable with respect to the order of inputs and outputs.
-	/// Method consumes the block.
-	///
-	/// NOTE: exclude coinbase from cut-through process
-	/// if a block contains a new coinbase output and
-	/// is a transaction spending a previous coinbase
-	/// we do not want to cut-through (all coinbase must be preserved)
+    /// Matches any output with a potential spending input, eliminating them
+    /// from the block. Provides a simple way to cut-through the block. The
+    /// elimination is stable with respect to the order of inputs and outputs.
+    /// Method consumes the block.
+    ///
+    /// NOTE: exclude coinbase from cut-through process
+    /// if a block contains a new coinbase output and
+    /// is a transaction spending a previous coinbase
+    /// we do not want to cut-through (all coinbase must be preserved)
 ```
 
 

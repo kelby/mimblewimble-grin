@@ -31,8 +31,8 @@
   * [出块时间](chapter1/chu-kuai-shi-jian.md)
   * [PMMR](chapter1/pmmr.md)
   * [core](chapter1/core.md)
-  * chain
-  * pow
+  * [chain](chapter1/chain.md)
+  * [PoW 工作量证明](chapter1/pow.md)
   * [pool](chapter1/pool.md)
   * [BlockSums](chapter1/blocksums.md)
   * [其它](chapter1/qi-ta.md)
