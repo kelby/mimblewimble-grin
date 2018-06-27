@@ -10,8 +10,6 @@ commit\_index ChainStore
 
 方便某些情况下管理“交易”。
 
-## Extension
-
 ```rust
 /// An easy to manipulate structure holding the 3 sum trees necessary to
 /// validate blocks and capturing the Output set, the range proofs and the
@@ -24,8 +22,9 @@ commit\_index ChainStore
 /// pruning enabled.
 ```
 
+## Extension
+
 ```rust
-/// Allows the application of new blocks on top of the sum trees in a
 /// reversible manner within a unit of work provided by the `extending`
 /// function.
 pub struct Extension<'a> {
