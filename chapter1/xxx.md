@@ -17,30 +17,30 @@ total\_kernel\_offset: BlindingFactor \# 从创世区块到当前的 kernel offs
 ```rust
 /// Block header, fairly standard compared to other blockchains.
 pub struct BlockHeader {
-	/// Version of the block
-	pub version: u16,
-	/// Height of this block since the genesis block (height 0)
-	pub height: u64,
-	/// Hash of the block previous to this in the chain.
-	pub previous: Hash,
-	/// Timestamp at which the block was built.
-	pub timestamp: time::Tm,
-	/// Total accumulated difficulty since genesis block
-	pub total_difficulty: Difficulty,
-	/// Merklish root of all the commitments in the TxHashSet
-	pub output_root: Hash,
-	/// Merklish root of all range proofs in the TxHashSet
-	pub range_proof_root: Hash,
-	/// Merklish root of all transaction kernels in the TxHashSet
-	pub kernel_root: Hash,
-	/// Total accumulated sum of kernel offsets since genesis block.
-	/// We can derive the kernel offset sum for *this* block from
-	/// the total kernel offset of the previous block header.
-	pub total_kernel_offset: BlindingFactor,
-	/// Nonce increment used to mine this block.
-	pub nonce: u64,
-	/// Proof of work data.
-	pub pow: Proof,
+    /// Version of the block
+    pub version: u16,
+    /// Height of this block since the genesis block (height 0)
+    pub height: u64,
+    /// Hash of the block previous to this in the chain.
+    pub previous: Hash,
+    /// Timestamp at which the block was built.
+    pub timestamp: time::Tm,
+    /// Total accumulated difficulty since genesis block
+    pub total_difficulty: Difficulty,
+    /// Merklish root of all the commitments in the TxHashSet
+    pub output_root: Hash,
+    /// Merklish root of all range proofs in the TxHashSet
+    pub range_proof_root: Hash,
+    /// Merklish root of all transaction kernels in the TxHashSet
+    pub kernel_root: Hash,
+    /// Total accumulated sum of kernel offsets since genesis block.
+    /// We can derive the kernel offset sum for *this* block from
+    /// the total kernel offset of the previous block header.
+    pub total_kernel_offset: BlindingFactor,
+    /// Nonce increment used to mine this block.
+    pub nonce: u64,
+    /// Proof of work data.
+    pub pow: Proof,
 }
 ```
 
@@ -55,6 +55,25 @@ Output
 TxKernel
 
 注意：区块头保存的是这几者的 Merklish root, 而这里是关联着具体的实体。
+
+```rust
+/// A block as expressed in the MimbleWimble protocol. The reward is
+/// non-explicit, assumed to be deducible from block height (similar to
+/// bitcoin's schedule) and expressed as a global transaction fee (added v.H),
+/// additive to the total of fees ever collected.
+#[derive(Debug, Clone)]
+pub struct Block {
+	/// The header with metadata and commitments to the rest of the data
+	pub header: BlockHeader,
+	/// List of transaction inputs
+	pub inputs: Vec<Input>,
+	/// List of transaction outputs
+	pub outputs: Vec<Output>,
+	/// List of kernels with associated proofs (note these are offset from
+	/// tx_kernels)
+	pub kernels: Vec<TxKernel>,
+}
+```
 
 ## A block is simply built from:
 
