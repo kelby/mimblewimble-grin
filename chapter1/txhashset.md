@@ -20,17 +20,32 @@ commit\_index ChainStore
 /// guaranteed to indicate whether an output is spent or not. The index
 /// may have commitments that have already been spent, even with
 /// pruning enabled.
+
+pub struct TxHashSet {
+	output_pmmr_h: PMMRHandle<OutputIdentifier>,
+	rproof_pmmr_h: PMMRHandle<RangeProof>,
+	kernel_pmmr_h: PMMRHandle<TxKernel>,
+
+	// chain store used as index of commitments to MMR positions
+	commit_index: Arc<ChainStore>,
+}
 ```
 
 ## Extension
 
 ```rust
+/// Allows the application of new blocks on top of the sum trees in a
 /// reversible manner within a unit of work provided by the `extending`
 /// function.
 pub struct Extension<'a> {
-    output_pmmr: PMMR<'a, OutputIdentifier, PMMRBackend<OutputIdentifier>>,
-    rproof_pmmr: PMMR<'a, RangeProof, PMMRBackend<RangeProof>>,
-    kernel_pmmr: PMMR<'a, TxKernel, PMMRBackend<TxKernel>>,
+	output_pmmr: PMMR<'a, OutputIdentifier, PMMRBackend<OutputIdentifier>>,
+	rproof_pmmr: PMMR<'a, RangeProof, PMMRBackend<RangeProof>>,
+	kernel_pmmr: PMMR<'a, TxKernel, PMMRBackend<TxKernel>>,
+
+	commit_index: Arc<ChainStore>,
+	new_output_commits: HashMap<Commitment, u64>,
+	new_block_markers: HashMap<Hash, BlockMarker>,
+	rollback: bool,
 }
 ```
 
