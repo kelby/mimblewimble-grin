@@ -9,7 +9,7 @@
   * [Block verification](she-ji-li-nian/block-verification.md)
   * [Mimblewimble Transactions](she-ji-li-nian/mimblewimble-transactions.md)
 * [三层设计](san-ceng-she-ji.md)
-  * 应用层、核心层、底层
+  * [应用层、核心层、底层](san-ceng-she-ji/ying-yong-ceng-3001-he-xin-ceng-3001-di-ceng.md)
   * MVC
   * 计算、网络、存储
 * [架构](jia-gou.md)
