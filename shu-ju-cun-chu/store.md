@@ -13,15 +13,15 @@ const BLOCK_SUMS_PREFIX: u8 = 'M' as u8;
 const BLOCK_INPUT_BITMAP_PREFIX: u8 = 'B' as u8;
 ```
 
-## LeafSet
+## PMMRHandle
 
 ```rust
-/// Compact (roaring) bitmap representing the set of positions of
-/// leaves that are currently unpruned in the MMR.
-pub struct LeafSet {
-    path: String,
-    bitmap: Bitmap,
-    bitmap_bak: Bitmap,
+struct PMMRHandle<T>
+where
+	T: PMMRable,
+{
+	backend: PMMRBackend<T>,
+	last_pos: u64,
 }
 ```
 
@@ -52,7 +52,19 @@ where
 }
 ```
 
-## PruneList
+#### LeafSet
+
+```rust
+/// Compact (roaring) bitmap representing the set of positions of
+/// leaves that are currently unpruned in the MMR.
+pub struct LeafSet {
+    path: String,
+    bitmap: Bitmap,
+    bitmap_bak: Bitmap,
+}
+```
+
+#### PruneList
 
 ```rust
 /// Maintains a list of previously pruned nodes in PMMR, compacting the list as
@@ -73,7 +85,7 @@ pub struct PruneList {
 }
 ```
 
-## RemoveLog
+#### RemoveLog
 
 ```rust
 /// Log file fully cached in memory containing all positions that should be
@@ -92,7 +104,7 @@ pub struct RemoveLog {
 }
 ```
 
-## AppendOnlyFile
+#### AppendOnlyFile
 
 ```rust
 /// Wrapper for a file that can be read at any position (random read) but for
