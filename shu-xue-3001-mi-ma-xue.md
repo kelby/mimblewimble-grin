@@ -1,8 +1,6 @@
-Elliptic Curve Cryptography
+数据结构。
 
-```
-(k+j)*H = k*H + j*H
-```
+加密、签名，验证，计算。
 
 
 
