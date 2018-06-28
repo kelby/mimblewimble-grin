@@ -65,14 +65,14 @@ pub struct MerkleProof {
 ```rust
 pub struct PMMRBackend<T>
 where
-	T: PMMRable,
+    T: PMMRable,
 {
-	data_dir: String,
-	hash_file: AppendOnlyFile,
-	data_file: AppendOnlyFile,
-	leaf_set: LeafSet,
-	prune_list: PruneList,
-	_marker: marker::PhantomData<T>,
+    data_dir: String,
+    hash_file: AppendOnlyFile,
+    data_file: AppendOnlyFile,
+    leaf_set: LeafSet,
+    prune_list: PruneList,
+    _marker: marker::PhantomData<T>,
 }
 ```
 
