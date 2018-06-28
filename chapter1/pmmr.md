@@ -24,21 +24,57 @@ Prunable Merkle Mountain Range
 /// The root is the result of hashing all the peaks together.
 #[derive(Clone, Debug, Eq, Ord, PartialEq, PartialOrd, Serialize, Deserialize)]
 pub struct MerkleProof {
-	/// The root hash of the full Merkle tree (in an MMR the hash of all peaks)
-	pub root: Hash,
-	/// The hash of the element in the tree we care about
-	pub node: Hash,
-	/// The size of the full Merkle tree
-	pub mmr_size: u64,
-	/// The full list of peak hashes in the MMR
-	pub peaks: Vec<Hash>,
-	/// The sibling (hash, pos) along the path of the tree
-	/// as we traverse from node to peak
-	pub path: Vec<(Hash, u64)>,
+    /// The root hash of the full Merkle tree (in an MMR the hash of all peaks)
+    pub root: Hash,
+    /// The hash of the element in the tree we care about
+    pub node: Hash,
+    /// The size of the full Merkle tree
+    pub mmr_size: u64,
+    /// The full list of peak hashes in the MMR
+    pub peaks: Vec<Hash>,
+    /// The sibling (hash, pos) along the path of the tree
+    /// as we traverse from node to peak
+    pub path: Vec<(Hash, u64)>,
 }
 ```
 
+## PMMRBackend
 
+/// PMMR persistent backend implementation. Relies on multiple facilities to
+
+/// handle writing, reading and pruning.
+
+///
+
+/// \* A main storage file appends Hash instances as they come.
+
+/// This AppendOnlyFile is also backed by a mmap for reads.
+
+/// \* An in-memory backend buffers the latest batch of writes to ensure the
+
+/// PMMR can always read recent values even if they haven't been flushed to
+
+/// disk yet.
+
+/// \* A leaf\_set tracks unpruned \(unremoved\) leaf positions in the MMR..
+
+/// \* A prune\_list tracks the positions of pruned \(and compacted\) roots in the
+
+/// MMR.
+
+```rust
+pub struct PMMRBackend<T>
+where
+	T: PMMRable,
+{
+	data_dir: String,
+	hash_file: AppendOnlyFile,
+	data_file: AppendOnlyFile,
+	leaf_set: LeafSet,
+	prune_list: PruneList,
+	_marker: marker::PhantomData<T>,
+}
+```
 
 
 
