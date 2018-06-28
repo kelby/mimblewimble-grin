@@ -19,15 +19,13 @@ const BLOCK_INPUT_BITMAP_PREFIX: u8 = 'B' as u8;
 /// Compact (roaring) bitmap representing the set of positions of
 /// leaves that are currently unpruned in the MMR.
 pub struct LeafSet {
-	path: String,
-	bitmap: Bitmap,
-	bitmap_bak: Bitmap,
+    path: String,
+    bitmap: Bitmap,
+    bitmap_bak: Bitmap,
 }
 ```
 
 ## PMMRBackend
-
-
 
 ```rust
 /// PMMR persistent backend implementation. Relies on multiple facilities to
@@ -43,14 +41,14 @@ pub struct LeafSet {
 /// MMR.
 pub struct PMMRBackend<T>
 where
-	T: PMMRable,
+    T: PMMRable,
 {
-	data_dir: String,
-	hash_file: AppendOnlyFile,
-	data_file: AppendOnlyFile,
-	leaf_set: LeafSet,
-	prune_list: PruneList,
-	_marker: marker::PhantomData<T>,
+    data_dir: String,
+    hash_file: AppendOnlyFile,
+    data_file: AppendOnlyFile,
+    leaf_set: LeafSet,
+    prune_list: PruneList,
+    _marker: marker::PhantomData<T>,
 }
 ```
 
@@ -69,9 +67,9 @@ where
 /// backend storage anymore. The PruneList accounts for that mismatch and does
 /// the position translation.
 pub struct PruneList {
-	path: Option<String>,
-	/// Bitmap representing pruned root node positions.
-	bitmap: Bitmap,
+    path: Option<String>,
+    /// Bitmap representing pruned root node positions.
+    bitmap: Bitmap,
 }
 ```
 
@@ -84,13 +82,13 @@ pub struct PruneList {
 /// log becomes too long, the MMR backend will actually remove chunks from the
 /// MMR data file and truncate the remove log.
 pub struct RemoveLog {
-	path: String,
-	/// Ordered vector of MMR positions that should get eventually removed.
-	pub removed: Vec<(u64, u32)>,
-	// Holds positions temporarily until flush is called.
-	removed_tmp: Vec<(u64, u32)>,
-	// Holds truncated removed temporarily until discarded or committed
-	removed_bak: Vec<(u64, u32)>,
+    path: String,
+    /// Ordered vector of MMR positions that should get eventually removed.
+    pub removed: Vec<(u64, u32)>,
+    // Holds positions temporarily until flush is called.
+    removed_tmp: Vec<(u64, u32)>,
+    // Holds truncated removed temporarily until discarded or committed
+    removed_bak: Vec<(u64, u32)>,
 }
 ```
 
@@ -106,16 +104,14 @@ pub struct RemoveLog {
 /// former simply happens by rewriting it, ignoring some of the data. The
 /// latter by truncating the underlying file and re-creating the mmap.
 pub struct AppendOnlyFile {
-	path: String,
-	file: File,
-	mmap: Option<memmap::Mmap>,
-	buffer_start: usize,
-	buffer: Vec<u8>,
-	buffer_start_bak: usize,
+    path: String,
+    file: File,
+    mmap: Option<memmap::Mmap>,
+    buffer_start: usize,
+    buffer: Vec<u8>,
+    buffer_start_bak: usize,
 }
 ```
-
-
 
 
 
