@@ -2,12 +2,17 @@
 
 * [介绍](README.md)
 * [白皮书解读](bai-pi-shu-jie-du.md)
+  * [Original MimbleWimble white paper](bai-pi-shu-jie-du/original-mimblewimble-white-paper.md)
+  * [Andrew Poelstra’s MimbleWimble follow up paper](bai-pi-shu-jie-du/andrew-poelstras-mimblewimble-follow-up-paper.md)
 * [设计理念](she-ji-li-nian.md)
   * [Trust model](she-ji-li-nian/trust-model.md)
-  * Block verification
-  * Mimblewimble Transactions
-* [架构](jia-gou.md)
+  * [Block verification](she-ji-li-nian/block-verification.md)
+  * [Mimblewimble Transactions](she-ji-li-nian/mimblewimble-transactions.md)
 * [三层设计](san-ceng-she-ji.md)
+  * 应用层、核心层、底层
+  * MVC
+  * 计算、网络、存储
+* [架构](jia-gou.md)
 * [区块链](chapter1.md)
   * [链](chapter1/lian.md)
   * [Tip](chapter1/tip.md)
