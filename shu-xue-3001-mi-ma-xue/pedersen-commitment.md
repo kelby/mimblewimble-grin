@@ -60,13 +60,11 @@ All outputs include a Pedersen commitment of the form`r*G + v*H`with`r`the blind
 
 ## 实际使用中的数据结构
 
-Commitment
+Commitment \# 使用频率最多
 
-RangeProof
+RangeProof \# 使用频率次之
 
 ProofMessage
 
 ProofInfo
-
-
 
