@@ -37,7 +37,7 @@ pub struct BlockHeader {
     /// We can derive the kernel offset sum for *this* block from
     /// the total kernel offset of the previous block header.
     pub total_kernel_offset: BlindingFactor,
-    /// Nonce increment used to mine this block.
+    /// Nonce increment used to mine this block. 随机数，供加密、签名、验证、计算用
     pub nonce: u64,
     /// Proof of work data.
     pub pow: Proof,

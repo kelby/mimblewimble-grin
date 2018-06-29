@@ -2,15 +2,15 @@
 /// A transaction
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Transaction {
-	/// List of inputs spent by the transaction.
-	pub inputs: Vec<Input>,
-	/// List of outputs the transaction produces.
-	pub outputs: Vec<Output>,
-	/// List of kernels that make up this transaction (usually a single kernel).
-	pub kernels: Vec<TxKernel>,
-	/// The kernel "offset" k2
-	/// excess is k1G after splitting the key k = k1 + k2
-	pub offset: BlindingFactor,
+    /// List of inputs spent by the transaction.
+    pub inputs: Vec<Input>,
+    /// List of outputs the transaction produces.
+    pub outputs: Vec<Output>,
+    /// List of kernels that make up this transaction (usually a single kernel).
+    pub kernels: Vec<TxKernel>,
+    /// The kernel "offset" k2
+    /// excess is k1G after splitting the key k = k1 + k2
+    pub offset: BlindingFactor, // 随机数，供加密、签名、验证、计算用
 }
 ```
 
