@@ -18,12 +18,14 @@ const BLOCK_INPUT_BITMAP_PREFIX: u8 = 'B' as u8;
 ```rust
 struct PMMRHandle<T>
 where
-	T: PMMRable,
+    T: PMMRable,
 {
-	backend: PMMRBackend<T>,
-	last_pos: u64,
+    backend: PMMRBackend<T>,
+    last_pos: u64,
 }
 ```
+
+TxHashSet 会用到它。
 
 ## PMMRBackend
 
