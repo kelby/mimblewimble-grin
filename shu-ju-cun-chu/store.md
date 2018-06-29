@@ -87,25 +87,6 @@ pub struct PruneList {
 }
 ```
 
-#### RemoveLog
-
-```rust
-/// Log file fully cached in memory containing all positions that should be
-/// eventually removed from the MMR append-only data file. Allows quick
-/// checking of whether a piece of data has been marked for deletion. When the
-/// log becomes too long, the MMR backend will actually remove chunks from the
-/// MMR data file and truncate the remove log.
-pub struct RemoveLog {
-    path: String,
-    /// Ordered vector of MMR positions that should get eventually removed.
-    pub removed: Vec<(u64, u32)>,
-    // Holds positions temporarily until flush is called.
-    removed_tmp: Vec<(u64, u32)>,
-    // Holds truncated removed temporarily until discarded or committed
-    removed_bak: Vec<(u64, u32)>,
-}
-```
-
 #### AppendOnlyFile
 
 ```rust
