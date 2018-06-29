@@ -50,7 +50,7 @@ where
     data_file: AppendOnlyFile, // 两个文件之一
     leaf_set: LeafSet, // 未修剪数据
     prune_list: PruneList, // 已修剪数据
-    _marker: marker::PhantomData<T>, // 临时存储
+    _marker: marker::PhantomData<T>, // 临时存储。（自动操作）
 }
 ```
 
