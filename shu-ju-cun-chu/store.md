@@ -46,11 +46,11 @@ where
     T: PMMRable,
 {
     data_dir: String,
-    hash_file: AppendOnlyFile,
-    data_file: AppendOnlyFile,
-    leaf_set: LeafSet,
-    prune_list: PruneList,
-    _marker: marker::PhantomData<T>,
+    hash_file: AppendOnlyFile, // 两种文件之一
+    data_file: AppendOnlyFile, // 两种文件之一
+    leaf_set: LeafSet, // 未修剪数据
+    prune_list: PruneList, // 已修剪数据
+    _marker: marker::PhantomData<T>, // 临时存储
 }
 ```
 
