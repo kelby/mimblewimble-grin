@@ -34,6 +34,7 @@
   * [出块时间](chapter1/chu-kuai-shi-jian.md)
   * [PoW 工作量证明](chapter1/pow.md)
   * [其它](chapter1/qi-ta.md)
+  * [ChainKVStore](chapter1/chainkvstore.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
