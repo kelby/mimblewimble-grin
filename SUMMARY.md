@@ -31,7 +31,6 @@
   * [证明 Proof](chapter1/zheng-ming-proof.md)
   * [手续费](chapter1/shou-xu-fei.md)
   * [奖励](chapter1/jiang-li.md)
-  * [发行曲线](chapter1/fa-xing-qu-xian.md)
   * [出块时间](chapter1/chu-kuai-shi-jian.md)
   * [PoW 工作量证明](chapter1/pow.md)
   * [其它](chapter1/qi-ta.md)
