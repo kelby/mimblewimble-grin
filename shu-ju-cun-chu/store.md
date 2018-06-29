@@ -25,7 +25,7 @@ where
 }
 ```
 
-TxHashSet 会用到它。
+TxHashSet 会用到它，这是数据存储与区块链核心业务的链接之处。
 
 ## PMMRBackend
 
