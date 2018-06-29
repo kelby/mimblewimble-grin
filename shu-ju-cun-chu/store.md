@@ -46,8 +46,8 @@ where
     T: PMMRable,
 {
     data_dir: String,
-    hash_file: AppendOnlyFile, // 两种文件之一
-    data_file: AppendOnlyFile, // 两种文件之一
+    hash_file: AppendOnlyFile, // 两个文件之一
+    data_file: AppendOnlyFile, // 两个文件之一
     leaf_set: LeafSet, // 未修剪数据
     prune_list: PruneList, // 已修剪数据
     _marker: marker::PhantomData<T>, // 临时存储
@@ -55,6 +55,8 @@ where
 ```
 
 #### LeafSet
+
+未修剪数据
 
 ```rust
 /// Compact (roaring) bitmap representing the set of positions of
@@ -67,6 +69,8 @@ pub struct LeafSet {
 ```
 
 #### PruneList
+
+已修剪数据
 
 ```rust
 /// Maintains a list of previously pruned nodes in PMMR, compacting the list as
@@ -88,6 +92,8 @@ pub struct PruneList {
 ```
 
 #### AppendOnlyFile
+
+文件存储
 
 ```rust
 /// Wrapper for a file that can be read at any position (random read) but for
