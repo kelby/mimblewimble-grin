@@ -54,7 +54,7 @@ where
 }
 ```
 
-实现了 core 给出的 trait Backend
+实现了 core pmmr 给出的 trait Backend
 
 #### LeafSet
 
