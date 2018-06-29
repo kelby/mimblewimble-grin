@@ -86,5 +86,21 @@ Save blocks sums \(the output\_sum and kernel\_sum\) for the given block header.
 
 主要用于区块验证。
 
+## 3 种 Proof
+
+BlockHeader 在用的 Proof
+
+Input 在用的 MerkleProof
+
+Output 在用的 RangeProof
+
+## 2 种存储
+
+区块、交易等数据使用 ChainKVStore
+
+PMMR 专用 PMMRBackend
+
+
+
 
 
