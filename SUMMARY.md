@@ -28,7 +28,6 @@
   * [难度 Difficulty](chapter1/nan-du.md)
   * [成熟机制](chapter1/cheng-shu-ji-zhi.md)
   * [cut-through](chapter1/cut-through.md)
-  * [Merkle Structures](chapter1/merkle-structures.md)
   * [证明 Proof](chapter1/zheng-ming-proof.md)
   * [手续费](chapter1/shou-xu-fei.md)
   * [奖励](chapter1/jiang-li.md)
