@@ -8,6 +8,7 @@
   * [Trust model](she-ji-li-nian/trust-model.md)
   * [Block verification](she-ji-li-nian/block-verification.md)
   * [Mimblewimble Transactions](she-ji-li-nian/mimblewimble-transactions.md)
+  * [Partial History Syncing](she-ji-li-nian/partial-history-syncing.md)
 * [三层设计](san-ceng-she-ji.md)
   * [应用层、核心层、底层](san-ceng-she-ji/ying-yong-ceng-3001-he-xin-ceng-3001-di-ceng.md)
   * MVC
