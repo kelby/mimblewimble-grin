@@ -59,12 +59,12 @@ pub struct Extension<'a> {
 /// Needed because it is not sufficient to pass a commitment around.
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct OutputIdentifier {
-	/// Output features (coinbase vs. regular transaction output)
-	/// We need to include this when hashing to ensure coinbase maturity can be
-	/// enforced.
-	pub features: OutputFeatures,
-	/// Output commitment
-	pub commit: Commitment,
+    /// Output features (coinbase vs. regular transaction output)
+    /// We need to include this when hashing to ensure coinbase maturity can be
+    /// enforced.
+    pub features: OutputFeatures,
+    /// Output commitment
+    pub commit: Commitment,
 }
 ```
 
@@ -75,11 +75,11 @@ pub struct OutputIdentifier {
 /// particular block.
 #[derive(Debug, Clone)]
 pub struct BlockMarker {
-	/// The output (and rangeproof) MMR position of the final output in the
-	/// block
-	pub output_pos: u64,
-	/// The kernel position of the final kernel in the block
-	pub kernel_pos: u64,
+    /// The output (and rangeproof) MMR position of the final output in the
+    /// block
+    pub output_pos: u64,
+    /// The kernel position of the final kernel in the block
+    pub kernel_pos: u64,
 }
 ```
 
