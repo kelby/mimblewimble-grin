@@ -10,6 +10,8 @@ commit\_index ChainStore
 
 方便某些情况下管理“交易”。
 
+## TxHashSet
+
 ```rust
 /// An easy to manipulate structure holding the 3 sum trees necessary to
 /// validate blocks and capturing the Output set, the range proofs and the
@@ -22,12 +24,12 @@ commit\_index ChainStore
 /// pruning enabled.
 
 pub struct TxHashSet {
-	output_pmmr_h: PMMRHandle<OutputIdentifier>,
-	rproof_pmmr_h: PMMRHandle<RangeProof>,
-	kernel_pmmr_h: PMMRHandle<TxKernel>,
+    output_pmmr_h: PMMRHandle<OutputIdentifier>,
+    rproof_pmmr_h: PMMRHandle<RangeProof>,
+    kernel_pmmr_h: PMMRHandle<TxKernel>,
 
-	// chain store used as index of commitments to MMR positions
-	commit_index: Arc<ChainStore>,
+    // chain store used as index of commitments to MMR positions
+    commit_index: Arc<ChainStore>,
 }
 ```
 
@@ -38,14 +40,46 @@ pub struct TxHashSet {
 /// reversible manner within a unit of work provided by the `extending`
 /// function.
 pub struct Extension<'a> {
-	output_pmmr: PMMR<'a, OutputIdentifier, PMMRBackend<OutputIdentifier>>,
-	rproof_pmmr: PMMR<'a, RangeProof, PMMRBackend<RangeProof>>,
-	kernel_pmmr: PMMR<'a, TxKernel, PMMRBackend<TxKernel>>,
+    output_pmmr: PMMR<'a, OutputIdentifier, PMMRBackend<OutputIdentifier>>,
+    rproof_pmmr: PMMR<'a, RangeProof, PMMRBackend<RangeProof>>,
+    kernel_pmmr: PMMR<'a, TxKernel, PMMRBackend<TxKernel>>,
 
-	commit_index: Arc<ChainStore>,
-	new_output_commits: HashMap<Commitment, u64>,
-	new_block_markers: HashMap<Hash, BlockMarker>,
-	rollback: bool,
+    commit_index: Arc<ChainStore>,
+    new_output_commits: HashMap<Commitment, u64>,
+    new_block_markers: HashMap<Hash, BlockMarker>,
+    rollback: bool,
+}
+```
+
+#### OutputIdentifier
+
+```rust
+/// An output_identifier can be build from either an input _or_ an output and
+/// contains everything we need to uniquely identify an output being spent.
+/// Needed because it is not sufficient to pass a commitment around.
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
+pub struct OutputIdentifier {
+	/// Output features (coinbase vs. regular transaction output)
+	/// We need to include this when hashing to ensure coinbase maturity can be
+	/// enforced.
+	pub features: OutputFeatures,
+	/// Output commitment
+	pub commit: Commitment,
+}
+```
+
+#### BlockMarker
+
+```rust
+/// The output and kernel positions that define the size of the MMRs for a
+/// particular block.
+#[derive(Debug, Clone)]
+pub struct BlockMarker {
+	/// The output (and rangeproof) MMR position of the final output in the
+	/// block
+	pub output_pos: u64,
+	/// The kernel position of the final kernel in the block
+	pub kernel_pos: u64,
 }
 ```
 
