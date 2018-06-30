@@ -84,11 +84,7 @@ Save blocks sums \(the output\_sum and kernel\_sum\) for the given block header.
 
 会存储到数据，标识为 BLOCK\_SUMS\_PREFIX
 
-主要用于区块验证。
+主要用于区块验证、交易验证。
 
 Verify the sum of the kernel excesses equals the sum of the outputs, taking into account both the kernel\_offset and overage.
-
-
-
-
 

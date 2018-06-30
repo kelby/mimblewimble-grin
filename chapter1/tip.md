@@ -18,5 +18,7 @@ pub struct Tip {
 }
 ```
 
+数据可以完全从 BlockHeader 复制而来。
+
 
 
