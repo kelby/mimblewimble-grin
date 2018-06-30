@@ -5,7 +5,7 @@
 /// operate. Mostly needed to break any direct lifecycle or implementation
 /// dependency between the pool and the chain.
 pub struct PoolToChainAdapter {
-	chain: OneTime<Weak<chain::Chain>>,
+    chain: OneTime<Weak<chain::Chain>>,
 }
 ```
 
