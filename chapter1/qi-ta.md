@@ -86,9 +86,9 @@ Save blocks sums \(the output\_sum and kernel\_sum\) for the given block header.
 
 主要用于区块验证。
 
-## 
+Verify the sum of the kernel excesses equals the sum of the outputs, taking into account both the kernel\_offset and overage.
 
-## 
+
 
 
 
