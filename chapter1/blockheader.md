@@ -35,6 +35,10 @@ All block headers include the root hash of all unspent outputs in the chain at t
 
 ## 区块校验
 
+We're able to verify the whole chain, the total work, the validity of each block, their full content, etc. In addition, with MimbleWimble and full UTXO set commitments, even more integrity validation can be performed.
+
+区块（以及交易）的验证，都可分为两部分：自证（根据自身数据进行验证）；他证（借助与之相关的外部数据进行验证）。
+
 先检查版本和高度
 
 再检查时间戳
