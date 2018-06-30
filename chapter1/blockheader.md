@@ -29,6 +29,8 @@ pub struct BlockHeader {
 }
 ```
 
+All block headers include the root hash of all unspent outputs in the chain at the time of that block.
+
 > 虽然不是强制，但区块头没有类似"数组"这样的数据结构，下面的各个字段都相对比较固定。
 
 ## 区块校验
