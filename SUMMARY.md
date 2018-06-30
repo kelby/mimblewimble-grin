@@ -35,6 +35,8 @@
   * [出块时间](chapter1/chu-kuai-shi-jian.md)
   * [PoW 工作量证明](chapter1/pow.md)
   * [其它](chapter1/qi-ta.md)
+  * [3 种 Proof](chapter1/3-zhong-proof.md)
+  * [2 种存储](chapter1/2-zhong-cun-chu.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
