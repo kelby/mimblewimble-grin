@@ -17,7 +17,7 @@
 * [区块链](chapter1.md)
   * [链](chapter1/lian.md)
   * [Tip](chapter1/tip.md)
-  * [孤儿块](chapter1/gu-er-kuai.md)
+  * [孤儿](chapter1/gu-er-kuai.md)
   * [TxHashSet](chapter1/txhashset.md)
   * [区块](chapter1/xxx.md)
   * [BlockHeader](chapter1/blockheader.md)

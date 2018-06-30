@@ -12,13 +12,13 @@ MVC 里一个功能比较综合的“控制器”。
 /// maintains locking for the pipeline to avoid conflicting processing.
 pub struct Chain {
     db_root: String,
-    store: Arc<ChainStore>,
-    adapter: Arc<ChainAdapter>,
+    store: Arc<ChainStore>, // 数据存储
+    adapter: Arc<ChainAdapter>, // 网络传输
 
-    head: Arc<Mutex<Tip>>,
-    orphans: Arc<OrphanBlockPool>,
+    head: Arc<Mutex<Tip>>, // 基本信息
+    orphans: Arc<OrphanBlockPool>, // 孤儿
     txhashset_lock: Arc<Mutex<bool>>,
-    txhashset: Arc<RwLock<txhashset::TxHashSet>>,
+    txhashset: Arc<RwLock<txhashset::TxHashSet>>, // 关键信息
 
     // POW verification function
     pow_verifier: fn(&BlockHeader, u8) -> bool,
