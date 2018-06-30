@@ -68,6 +68,8 @@ pub struct OutputIdentifier {
 }
 ```
 
+> 注意：它可以从输入，也可以从输出而来。
+
 #### BlockMarker
 
 ```rust
