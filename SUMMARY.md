@@ -40,6 +40,7 @@
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [钱包CLI](api3001-ke-hu-duan/qian-bao-cli.md)
+  * [挖矿软件](api3001-ke-hu-duan/wa-kuang-ruan-jian.md)
   * [身份相关](api3001-ke-hu-duan/gong-yao-3001-si-yao-3001-di-zhi.md)
   * [数学/密码学相关](api3001-ke-hu-duan/jia-mi-3001-qian-ming.md)
   * [区块链相关](api3001-ke-hu-duan/jiao-yi.md)
