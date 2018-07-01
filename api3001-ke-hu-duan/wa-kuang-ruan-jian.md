@@ -38,13 +38,19 @@ pub struct StratumServer {
 // Worker Object - a connected stratum client - a miner, pool, proxy, etc...
 
 pub struct Worker {
-	id: String,
-	agent: String,
-	login: Option<String>,
-	stream: BufStream<TcpStream>,
-	error: bool,
-	authenticated: bool,
+    id: String,
+    agent: String,
+    login: Option<String>,
+    stream: BufStream<TcpStream>,
+    error: bool,
+    authenticated: bool,
 }
+```
+
+```rust
+use common::adapters::PoolToChainAdapter;
+use common::stats::{StratumStats, WorkerStats};
+use common::types::StratumServerConfig;
 ```
 
 
