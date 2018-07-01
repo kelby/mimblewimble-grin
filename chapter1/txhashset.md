@@ -10,6 +10,8 @@ commit\_index ChainStore
 
 方便某些情况下管理“交易”。
 
+可用于快速检索、校验、验证。
+
 ## TxHashSet
 
 ```rust

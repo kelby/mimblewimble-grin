@@ -23,7 +23,7 @@ pub struct OutputIdentifier {
 
 它是数据结构 TxHashSet 里的一部分。作用也和 TxHashSet 类似，仅是为了方便数据处理，方便开发。并非核心数据结构。
 
-## BlockContext
+## pipe BlockContext
 
 方便某些情况下管理“区块”
 
@@ -43,6 +43,12 @@ pub struct BlockContext {
     pub txhashset: Arc<RwLock<txhashset::TxHashSet>>,
 }
 ```
+
+模块化设计的产物。
+
+数据结构和 Chain 链有几分相似，相当于子集。
+
+并且其功能有限。
 
 ## Committed
 
