@@ -22,27 +22,55 @@ p2p::Peers 节点
 
 pool::TransactionPool 交易池
 
+#### rest API
+
 ```rust
+/// Gets block details given either a hash or height.
 get blocks
+
+/// Chain handler. Get the head details.
 get chain
+
+/// Chain compaction handler. Trigger a compaction of the chain state to regain storage space.
 get chain/compact
+
+/// Chain validation handler.
 get chain/validate
 get chain/outputs
+
+/// Temporary - fix header by height index.
 post chain/height-index
+
+/// Status handler. Post a summary of the server status
 get status
+
+// Sum tree handler. Retrieve the roots:
 get txhashset/roots
+
+// Last inserted nodes::
 get txhashset/lastoutputs?n=10
 get txhashset/lastrangeproofs
 get txhashset/lastkernels
+
+// UTXO traversal::
 get txhashset/outputs?start_index=1&max=100
+
+// Get basic information about the transaction pool.
 get pool
+
+// Push new transaction to our local transaction pool.
 post pool/push
+
+/// Peer operations
 post peers/a.b.c.d:p/ban
 post peers/a.b.c.d:p/unban
+
 get peers/all
 get peers/connected
 get peers/a.b.c.d
 ```
+
+每个请求都有对应的 Handler 进行处理。
 
 ## 信息包括
 
