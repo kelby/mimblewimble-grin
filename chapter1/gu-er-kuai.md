@@ -4,17 +4,17 @@
 
 ```rust
 struct Orphan {
-	block: Block,
-	opts: Options,
-	added: Instant,
+    block: Block,
+    opts: Options,
+    added: Instant,
 }
 
 struct OrphanBlockPool {
-	// blocks indexed by their hash
-	orphans: RwLock<HashMap<Hash, Orphan>>,
-	// additional index of height -> hash
-	// so we can efficiently identify a child block (ex-orphan) after processing a block
-	height_idx: RwLock<HashMap<u64, Vec<Hash>>>,
+    // blocks indexed by their hash
+    orphans: RwLock<HashMap<Hash, Orphan>>,
+    // additional index of height -> hash
+    // so we can efficiently identify a child block (ex-orphan) after processing a block
+    height_idx: RwLock<HashMap<u64, Vec<Hash>>>,
 }
 ```
 
