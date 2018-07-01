@@ -27,6 +27,10 @@ pub struct OutputIdentifier {
 
 方便某些情况下管理“区块”
 
+模块化设计的产物。
+
+数据结构和 Chain 链有几分相似，相当于子集。
+
 ```rust
 /// Contextual information required to process a new block and either reject or
 /// accept it.
@@ -44,11 +48,17 @@ pub struct BlockContext {
 }
 ```
 
-模块化设计的产物。
+其功能有限。
 
-数据结构和 Chain 链有几分相似，相当于子集。
+process\_block
 
-并且其功能有限。
+process\_block\_header
+
+sync\_block\_header
+
+rewind\_and\_apply\_fork
+
+等。
 
 ## Committed
 
