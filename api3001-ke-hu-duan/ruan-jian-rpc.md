@@ -1,11 +1,3 @@
-## hyper
-
-HTTP 相关库。发送 GET、POST 请求。
-
-hyper is a fast, safe HTTP implementation written in and for Rust.
-
-hyper offers both an HTTP client and server which can be used to drive complex web applications written entirely in Rust.
-
 ## iron
 
 Web 框架。
@@ -87,4 +79,14 @@ pool
 peers
 
 可以根据客户端需要，组合不同的数据结构。目前主要还是 GET 获取信息，没有 POST 等修改操作。
+
+#### hyper
+
+HTTP 相关库。发送 GET、POST 请求。
+
+hyper is a fast, safe HTTP implementation written in and for Rust.
+
+hyper offers both an HTTP client and server which can be used to drive complex web applications written entirely in Rust.
+
+
 
