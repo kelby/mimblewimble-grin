@@ -1,3 +1,5 @@
+Utility structs to handle the 3 hashtrees \(output, range proof, kernel\) more conveniently and transactionally.
+
 ## 主要是 3 个哈希的集合
 
 output\_pmmr\_h OutputIdentifier
