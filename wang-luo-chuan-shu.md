@@ -22,6 +22,16 @@ Net
 
 基本上是在这三者之前产生。
 
+## 核心
+
+以 Server 为入口，包含三大模块：
+
+* Peer 网络
+
+* PeerStore 存储
+
+* ChainAdapter 区块链。
+
 
 
 
