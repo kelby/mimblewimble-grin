@@ -22,19 +22,21 @@ struct TrackingAdapter {
 }
 ```
 
+主要工作由它封装的 NetAdapter 完成。
+
 #### PeerInfo
 
 ```rust
 /// General information about a connected peer that's useful to other modules.
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct PeerInfo {
-	pub capabilities: Capabilities,
-	pub user_agent: String,
-	pub version: u32,
-	pub addr: SocketAddr,
-	pub total_difficulty: Difficulty,
-	pub height: u64,
-	pub direction: Direction,
+    pub capabilities: Capabilities,
+    pub user_agent: String,
+    pub version: u32,
+    pub addr: SocketAddr,
+    pub total_difficulty: Difficulty,
+    pub height: u64,
+    pub direction: Direction,
 }
 ```
 
