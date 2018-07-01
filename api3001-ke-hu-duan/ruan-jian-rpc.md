@@ -1,10 +1,20 @@
 ## Web 框架
 
-iron
+**iron**
 
 输入参数+调用内部接口，目前看是3个服务+重要数据结构及其方法。
 
 Iron is a high level web framework built in and for Rust, built on **hyper**. Iron is designed to take advantage of Rust's greatest features - its excellent type system and its principled approach to ownership in both single threaded and multi threaded contexts.
+
+#### HTTP 相关库
+
+**hyper**
+
+发送 GET、POST 请求。
+
+hyper is a fast, safe HTTP implementation written in and for Rust.
+
+hyper offers both an HTTP client and server which can be used to drive complex web applications written entirely in Rust.
 
 ## 3 个服务
 
@@ -80,11 +90,5 @@ peers
 
 可以根据客户端需要，组合不同的数据结构。目前主要还是 GET 获取信息，没有 POST 等修改操作。
 
-#### hyper
 
-HTTP 相关库。发送 GET、POST 请求。
-
-hyper is a fast, safe HTTP implementation written in and for Rust.
-
-hyper offers both an HTTP client and server which can be used to drive complex web applications written entirely in Rust.
 
