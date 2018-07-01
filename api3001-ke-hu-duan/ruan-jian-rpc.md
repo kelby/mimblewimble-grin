@@ -24,7 +24,7 @@ p2p::Peers 节点
 
 pool::TransactionPool 交易池
 
-#### rest API
+#### RESTful API
 
 ```rust
 /// Gets block details given either a hash or height.
@@ -89,6 +89,4 @@ pool
 peers
 
 可以根据客户端需要，组合不同的数据结构。目前主要还是 GET 获取信息，没有 POST 等修改操作。
-
-
 
