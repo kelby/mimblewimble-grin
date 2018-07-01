@@ -31,6 +31,27 @@ pub struct Handshake {
 }
 ```
 
+#### P2PConfig
+
+```rust
+/// Configuration for the peer-to-peer server.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct P2PConfig {
+	pub host: IpAddr,
+	pub port: u16,
+
+	pub peers_allow: Option<Vec<String>>,
+
+	pub peers_deny: Option<Vec<String>>,
+
+	pub ban_window: Option<i64>,
+
+	pub peer_max_count: Option<u32>,
+
+	pub peer_min_preferred_count: Option<u32>,
+}
+```
+
 #### msg
 
 MsgHeader
@@ -60,6 +81,4 @@ BanReason
 TxHashSetRequest
 
 TxHashSetArchive
-
-
 
