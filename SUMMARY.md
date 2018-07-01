@@ -37,6 +37,7 @@
   * [3 种 Proof](chapter1/3-zhong-proof.md)
   * [2 种存储](chapter1/2-zhong-cun-chu.md)
   * [其它](chapter1/qi-ta.md)
+  * [3 个证明](chapter1/3-ge-zheng-ming.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件CMD](api3001-ke-hu-duan/ruan-jian-cmd.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
