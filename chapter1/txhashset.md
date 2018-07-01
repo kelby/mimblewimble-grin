@@ -47,6 +47,8 @@ xxx
 
 ## Extension
 
+扩展 TxHashSet，大大增强了其功能。
+
 ```rust
 /// Allows the application of new blocks on top of the sum trees in a
 /// reversible manner within a unit of work provided by the `extending`
