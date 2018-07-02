@@ -60,6 +60,7 @@
   * [Peer](wang-luo-chuan-shu/peer.md)
   * [PeerStore](wang-luo-chuan-shu/peerstore.md)
   * [ChainAdapter](wang-luo-chuan-shu/chainadapter.md)
+  * [adapters](wang-luo-chuan-shu/adapters.md)
 * [数据存储](shu-ju-cun-chu.md)
   * [DB](shu-ju-cun-chu/db.md)
   * [ORM](shu-ju-cun-chu/orm.md)
