@@ -6,11 +6,7 @@ Rust wrapper for Facebook's RocksDB embeddable database.
 use rocksdb::{DBCompactionStyle, DBIterator, Direction, IteratorMode, WriteBatch, DB};
 ```
 
-## RoaringBitmap
+## Roaring Bitmap
 
-Bitmap索引在数据库和搜索引擎里使用的很广泛。
-
-
-
-
+Bitmap 索引在数据库和搜索引擎里使用的很广泛。
 
