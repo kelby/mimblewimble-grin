@@ -104,6 +104,10 @@ Save blocks sums \(the output\_sum and kernel\_sum\) for the given block header.
 
 Verify the sum of the kernel excesses equals the sum of the outputs, taking into account both the kernel\_offset and overage.
 
+## TxHashSetRoots
+
+A helper to hold the roots of the txhashset in order to keep them readable
+
 ## ChainKVStore
 
 数据存储 ORM
