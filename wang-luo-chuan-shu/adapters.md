@@ -1,3 +1,5 @@
+P2P网络传输与区块链核心业务之间产生联系的枢纽。
+
 ## ChainToPoolAndNetAdapter
 
 ```rust
