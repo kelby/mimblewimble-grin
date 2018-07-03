@@ -49,5 +49,17 @@ pub struct NetToChainAdapter {
 }
 ```
 
+## 怎么连接的？
+
+* chain 有 pub trait ChainAdapter 对应 servers 有 impl ChainAdapter for ChainToPoolAndNetAdapter
+
+* p2p 有 pub trait ChainAdapter: Sync + Send 对应 servers 有 impl p2p::ChainAdapter for NetToChainAdapter
+
+* pool 有 pub trait PoolAdapter: Send + Sync 对应 servers 有 impl pool::PoolAdapter for PoolToNetAdapter
+
+* pool 有 pub trait BlockChain 对应 servers 有 impl pool::BlockChain for PoolToChainAdapter
+
+
+
 
 
