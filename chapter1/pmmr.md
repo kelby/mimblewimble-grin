@@ -25,16 +25,16 @@ Prunable Merkle Mountain Range
 #[derive(Clone, Debug, Eq, Ord, PartialEq, PartialOrd, Serialize, Deserialize)]
 pub struct MerkleProof {
     /// The root hash of the full Merkle tree (in an MMR the hash of all peaks)
-    pub root: Hash,
+    pub root: Hash, // 根
     /// The hash of the element in the tree we care about
-    pub node: Hash,
+    pub node: Hash, // 叶子
     /// The size of the full Merkle tree
-    pub mmr_size: u64,
+    pub mmr_size: u64, // 总数据大小
     /// The full list of peak hashes in the MMR
-    pub peaks: Vec<Hash>,
+    pub peaks: Vec<Hash>, // 枝干
     /// The sibling (hash, pos) along the path of the tree
     /// as we traverse from node to peak
-    pub path: Vec<(Hash, u64)>,
+    pub path: Vec<(Hash, u64)>, // 路径
 }
 ```
 
