@@ -1,5 +1,7 @@
 ## Miner
 
+独立挖矿模式。
+
 ```rust
 pub struct Miner {
     config: StratumServerConfig,
@@ -12,8 +14,6 @@ pub struct Miner {
     debug_output_id: String,
 }
 ```
-
-
 
 
 

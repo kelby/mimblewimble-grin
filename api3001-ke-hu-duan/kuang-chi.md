@@ -1,5 +1,7 @@
 ## StratumServer
 
+矿池挖矿模式。
+
 ```rust
 // Grin Stratum Server
 
