@@ -6,7 +6,7 @@
 
 Iron is a high level web framework built in and for Rust, built on **hyper**. Iron is designed to take advantage of Rust's greatest features - its excellent type system and its principled approach to ownership in both single threaded and multi threaded contexts.
 
-#### HTTP 相关库
+## HTTP 相关库
 
 **hyper**
 
@@ -18,17 +18,7 @@ hyper is a fast, safe HTTP implementation written in and for Rust.
 
 hyper offers both an HTTP client and server which can be used to drive complex web applications written entirely in Rust.
 
-## 3 个服务
-
-主要和以下几个模块进行交互：
-
-* chain::Chain 链
-
-* p2p::Peers 节点
-
-* pool::TransactionPool 交易池
-
-#### RESTful API
+## RESTful API
 
 ```rust
 /// Gets block details given either a hash or height.
@@ -78,7 +68,7 @@ get peers/a.b.c.d
 
 每个请求都有对应的 Handler 进行处理。
 
-## 信息包括
+#### 信息包括
 
 blocks
 
@@ -93,4 +83,18 @@ pool
 peers
 
 可以根据客户端需要，组合不同的数据结构。目前主要还是 GET 获取信息，没有 POST 等修改操作。
+
+> 钱包CMD也可以封装调用这里已经实现的方法。
+
+#### 主要涉及功能模块
+
+主要和以下几个模块进行交互：
+
+* chain::Chain 链（链和区块）
+
+* p2p::Peers 网络节点
+
+* pool::TransactionPool 交易池
+
+
 
