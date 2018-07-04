@@ -12,6 +12,20 @@ Prunable Merkle Mountain Range
 /// we are in the sequence of nodes making up the MMR.
 ```
 
+merkle\_proof
+
+```
+/// Build a Merkle proof for the element at the given position in the MMR
+```
+
+validate
+
+```
+/// Walks all unpruned nodes in the MMR and revalidate all parent hashes
+```
+
+
+
 ## MerkleProof
 
 ```rust
@@ -36,6 +50,16 @@ pub struct MerkleProof {
     /// as we traverse from node to peak
     pub path: Vec<(Hash, u64)>, // 路径
 }
+```
+
+verify
+
+```
+	/// Verify the Merkle proof.
+	/// We do this by verifying the following -
+	/// * inclusion of the node beneath a peak (via the Merkle path/branch of
+	/// siblings) * inclusion of the peak in the "bag of peaks" beneath the
+	/// root
 ```
 
 ## PMMRBackend
