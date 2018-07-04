@@ -30,11 +30,17 @@ List of kernels that make up this transaction \(usually a single kernel\).
 
 The kernel "offset" k2 excess is k1G after splitting the key k = k1 + k2
 
-## 两个校验
+## 校验
 
 Verification of zero sums. 输入与输出之差为0，不能额外产生或者销毁。
 
 Possession of private keys. 确保私钥的拥有者才能发起交易。
+
+```
+    /// Validates all relevant parts of a fully built transaction. Checks the
+    /// excess value against the signature as well as range proofs for each
+    /// output.
+```
 
 ## A Grin transaction consists of the following
 
@@ -75,7 +81,12 @@ Slate（核心业务。用于构建交易所需的公开数据）
 
 下面所有 kernels 的被锁高度（lock\_height）取最大值
 
-## 合并
+## 合并 aggregate
+
+```
+/// Aggregate a vec of transactions into a multi-kernel transaction with
+/// cut_through
+```
 
 aggregate 已经实现。
 
