@@ -20,11 +20,13 @@ hyper offers both an HTTP client and server which can be used to drive complex w
 
 ## 3 个服务
 
-chain::Chain 链
+主要和以下几个模块进行交互：
 
-p2p::Peers 节点
+* chain::Chain 链
 
-pool::TransactionPool 交易池
+* p2p::Peers 节点
+
+* pool::TransactionPool 交易池
 
 #### RESTful API
 
