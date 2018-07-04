@@ -11,8 +11,8 @@
   * [Partial History Syncing](she-ji-li-nian/partial-history-syncing.md)
 * [三层设计](san-ceng-she-ji.md)
   * [应用层、核心层、底层](san-ceng-she-ji/ying-yong-ceng-3001-he-xin-ceng-3001-di-ceng.md)
-  * MVC
-  * 计算、网络、存储
+  * [MVC](san-ceng-she-ji/mvc.md)
+  * [计算、网络、存储](san-ceng-she-ji/ji-suan-3001-wang-luo-3001-cun-chu.md)
 * [架构](jia-gou.md)
 * [区块链](chapter1.md)
   * [链](chapter1/lian.md)

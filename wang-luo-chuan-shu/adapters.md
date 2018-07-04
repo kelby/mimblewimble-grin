@@ -61,5 +61,3 @@ pub struct NetToChainAdapter {
 
 
 
-
-
