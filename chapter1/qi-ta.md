@@ -155,5 +155,25 @@ const BLOCK_INPUT_BITMAP_PREFIX: u8 = 'B' as u8;
 /// summing, taking potential explicit overages of fees into account.
 ```
 
+sum\_kernel\_excesses
+
+```
+/// Gather the kernel excesses and sum them.
+```
+
+sum\_commitments
+
+```
+/// Gathers commitments and sum them.
+```
+
+verify\_kernel\_sums
+
+```
+	/// Verify the sum of the kernel excesses equals the
+	/// sum of the outputs, taking into account both
+	/// the kernel_offset and overage.
+```
+
 
 
