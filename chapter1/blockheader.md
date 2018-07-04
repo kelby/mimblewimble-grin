@@ -1,3 +1,19 @@
+## **BlockHeader** 区块头
+
+元数据。很通用的数据，本区块链特有的数据。
+
+比较特殊的有：
+
+output\_root: Hash \# 根据下面所有的 TxHashSet 而来
+
+range\_proof\_root: Hash\# 根据下面所有的 TxHashSet 而来
+
+kernel\_root: Hash\# 根据下面所有的 TxHashSet 而来
+
+total\_kernel\_offset: BlindingFactor \# 从创世区块到当前的 kernel offsets
+
+比特币只有 **mrkl\_root** 一个哈希，Grin 有三个，除此之外还有致盲因子。
+
 ```rust
 /// Block header, fairly standard compared to other blockchains.
 #[derive(Clone, Debug, PartialEq)]

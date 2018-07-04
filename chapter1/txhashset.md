@@ -37,6 +37,25 @@ pub struct TxHashSet {
 }
 ```
 
+#### OutputIdentifier
+
+```rust
+/// An output_identifier can be build from either an input _or_ an output and
+/// contains everything we need to uniquely identify an output being spent.
+/// Needed because it is not sufficient to pass a commitment around.
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
+pub struct OutputIdentifier {
+    /// Output features (coinbase vs. regular transaction output)
+    /// We need to include this when hashing to ensure coinbase maturity can be
+    /// enforced.
+    pub features: OutputFeatures,
+    /// Output commitment
+    pub commit: Commitment,
+}
+```
+
+它是数据结构 TxHashSet 里的一部分。作用也和 TxHashSet 类似，仅是为了方便数据处理，方便开发。并非核心数据结构。
+
 #### PMMRBackend
 
 xxx
@@ -97,6 +116,86 @@ pub struct BlockMarker {
     /// The kernel position of the final kernel in the block
     pub kernel_pos: u64,
 }
+```
+
+#### 操作
+
+is\_unspent
+
+```
+    /// Check if an output is unspent.
+    /// We look in the index to find the output MMR pos.
+    /// Then we check the entry in the output MMR and confirm the hash matches.
+```
+
+compact
+
+```
+/// Compact the MMR data files and flush the rm logs
+```
+
+apply\_raw\_tx
+
+```
+    /// Apply a "raw" transaction to the txhashset.
+    /// We will never commit a txhashset extension that includes raw txs.
+    /// But we can use this when validating txs in the tx pool.
+    /// If we can add a tx to the tx pool and then successfully add the
+    /// aggregated tx from the tx pool to the current chain state (via a
+    /// txhashset extension) then we know the tx pool is valid (including the
+    /// new tx).
+```
+
+validate\_raw\_txs
+
+```
+    /// Validate a vector of "raw" transactions against the current chain state.
+    /// We support rewind on a "dirty" txhashset - so we can apply each tx in
+    /// turn, rewinding if any particular tx is not valid and continuing
+    /// through the vec of txs provided. This allows us to efficiently apply
+    /// all the txs, filtering out those that are not valid and returning the
+    /// final vec of txs that were successfully validated against the txhashset.
+    ///
+    /// Note: We also pass in a "pre_tx". This tx is applied to and validated
+    /// before we start applying the vec of txs. We use this when validating
+    /// txs in the stempool as we need to account for txs in the txpool as
+    /// well (new_tx + stempool + txpool + txhashset). So we aggregate the
+    /// contents of the txpool into a single aggregated tx and pass it in here
+    /// as the "pre_tx" so we apply it to the txhashset before we start
+    /// validating the stempool txs.
+    /// This is optional and we pass in None when validating the txpool txs
+    /// themselves.
+```
+
+apply\_block
+
+```
+    /// Apply a new set of blocks on top the existing sum trees. Blocks are
+    /// applied in order of the provided Vec. If pruning is enabled, inputs also
+    /// prune MMR data.
+```
+
+merkle\_proof
+
+```
+    /// Build a Merkle proof for the given output and the block by
+    /// rewinding the MMR to the last pos of the block.
+    /// Note: this relies on the MMR being stable even after pruning/compaction.
+    /// We need the hash of each sibling pos from the pos up to the peak
+    /// including the sibling leaf node which may have been removed.
+```
+
+rewind
+
+```
+    /// Rewinds the MMRs to the provided block, rewinding to the last output pos
+    /// and last kernel pos of that block.
+```
+
+validate
+
+```
+/// Validate the txhashset state against the provided block header.
 ```
 
 
