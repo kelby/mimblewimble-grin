@@ -70,7 +70,6 @@
   * [Aggregate Signatures](shu-xue-3001-mi-ma-xue/aggregate-signatures.md)
   * [Elliptic Curve Cryptography \(ECC\)](shu-xue-3001-mi-ma-xue/elliptic-curve-cryptography-ecc.md)
   * [Confidential Transactions](shu-xue-3001-mi-ma-xue/confidential-transactions.md)
-  * [blinding factor](shu-xue-3001-mi-ma-xue/blinding-factor.md)
   * [SipHash](shu-xue-3001-mi-ma-xue/siphash.md)
   * [Schnorr signature](shu-xue-3001-mi-ma-xue/schnorr-signature.md)
   * [BLAKE2](shu-xue-3001-mi-ma-xue/blake2.md)
