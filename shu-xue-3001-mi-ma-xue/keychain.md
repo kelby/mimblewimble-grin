@@ -1,4 +1,15 @@
-## ExtendedKey
+## ExtKeychain
+
+```
+pub struct ExtKeychain {
+    secp: Secp256k1,
+    extkey: extkey::ExtendedKey,
+    key_overrides: HashMap<Identifier, SecretKey>,
+    key_derivation_cache: Arc<RwLock<HashMap<Identifier, u32>>>,
+}
+```
+
+#### ExtendedKey
 
 ```
 /// An ExtendedKey is a secret key which can be used to derive new
@@ -21,14 +32,17 @@ pub struct ExtendedKey {
 }
 ```
 
-## ExtKeychain
+## BlindSum
 
 ```
-pub struct ExtKeychain {
-    secp: Secp256k1,
-    extkey: extkey::ExtendedKey,
-    key_overrides: HashMap<Identifier, SecretKey>,
-    key_derivation_cache: Arc<RwLock<HashMap<Identifier, u32>>>,
+/// Accumulator to compute the sum of blinding factors. Keeps track of each
+/// factor as well as the "sign" with which they should be combined.
+#[derive(Clone, Debug, PartialEq)]
+pub struct BlindSum {
+    pub positive_key_ids: Vec<Identifier>,
+    pub negative_key_ids: Vec<Identifier>,
+    pub positive_blinding_factors: Vec<BlindingFactor>,
+    pub negative_blinding_factors: Vec<BlindingFactor>,
 }
 ```
 
@@ -46,19 +60,7 @@ pub struct Identifier([u8; IDENTIFIER_SIZE]);
 pub struct BlindingFactor([u8; SECRET_KEY_SIZE]);
 ```
 
-#### BlindSum
-
-```
-/// Accumulator to compute the sum of blinding factors. Keeps track of each
-/// factor as well as the "sign" with which they should be combined.
-#[derive(Clone, Debug, PartialEq)]
-pub struct BlindSum {
-    pub positive_key_ids: Vec<Identifier>,
-    pub negative_key_ids: Vec<Identifier>,
-    pub positive_blinding_factors: Vec<BlindingFactor>,
-    pub negative_blinding_factors: Vec<BlindingFactor>,
-}
-```
+## 
 
 
 
