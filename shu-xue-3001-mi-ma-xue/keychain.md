@@ -1,5 +1,7 @@
 ## ExtKeychain
 
+/// Implementation of the Keychain trait based on an extended key derivation scheme.
+
 ```
 pub struct ExtKeychain {
     secp: Secp256k1,
