@@ -1,4 +1,13 @@
-## A reference to an output being spent by a transaction.
+## \#\# Input
+
+A reference to an output being spent by a transaction.
+
+```
+/// The input for a transaction, which spends a pre-existing unspent output.
+/// The input commitment is a reproduction of the commitment of the output
+/// being spent. Input must also provide the original output features and the
+/// hash of the block the output originated from.
+```
 
 OutputFeatures \# 来源标记。来自普通交易，还是 Coinbase？根据来源不同，成熟时间不同。
 
@@ -42,24 +51,24 @@ pub struct Input {
 verify\_maturity
 
 ```
-	/// Verify the maturity of an output being spent by an input.
-	/// Only relevant for spending coinbase outputs currently (locked for 1,000
-	/// confirmations).
-	///
-	/// The proof associates the output with the root by its hash (and pos) in
-	/// the MMR. The proof shows the output existed and was unspent at the
-	/// time the output_root was built. The root associates the proof with a
-	/// specific block header with that output_root. So the proof shows the
-	/// output was unspent at the time of the block and is at least as old as
-	/// that block (may be older).
-	///
-	/// We can verify maturity of the output being spent by -
-	///
-	/// * verifying the Merkle Proof produces the correct root for the given
-	/// hash (from MMR) * verifying the root matches the output_root in the
-	/// block_header * verifying the hash matches the node hash in the Merkle
-	/// Proof * finally verify maturity rules based on height of the block
-	/// header
+    /// Verify the maturity of an output being spent by an input.
+    /// Only relevant for spending coinbase outputs currently (locked for 1,000
+    /// confirmations).
+    ///
+    /// The proof associates the output with the root by its hash (and pos) in
+    /// the MMR. The proof shows the output existed and was unspent at the
+    /// time the output_root was built. The root associates the proof with a
+    /// specific block header with that output_root. So the proof shows the
+    /// output was unspent at the time of the block and is at least as old as
+    /// that block (may be older).
+    ///
+    /// We can verify maturity of the output being spent by -
+    ///
+    /// * verifying the Merkle Proof produces the correct root for the given
+    /// hash (from MMR) * verifying the root matches the output_root in the
+    /// block_header * verifying the hash matches the node hash in the Merkle
+    /// Proof * finally verify maturity rules based on height of the block
+    /// header
 ```
 
 
