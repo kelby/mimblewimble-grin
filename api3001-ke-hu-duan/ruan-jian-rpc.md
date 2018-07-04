@@ -10,6 +10,8 @@ Iron is a high level web framework built in and for Rust, built on **hyper**. Ir
 
 **hyper**
 
+High level JSON/HTTP client API
+
 发送 GET、POST 请求。
 
 hyper is a fast, safe HTTP implementation written in and for Rust.
