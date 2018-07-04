@@ -141,7 +141,7 @@ where
 
 /// should care about communication details
 
-#### client
+## client
 
 通过 hyper 提供的接口向服务端发送请求。（直接使用 hyper，或使用 api::client 里的 GET/POST）
 
@@ -165,7 +165,7 @@ slate
 
 FileWallet &gt; WalletBackend/WalletClient &gt; OwnerAPIGetHandler/OwnerAPIPostHandler/OwnerAPIOptionsHandler/ForeignAPIHandler &gt; APIForeign/APIOwner
 
+FileWallet &gt; client
+
 FileWallet &gt; TX
-
-
 
