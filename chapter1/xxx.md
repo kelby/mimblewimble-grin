@@ -125,7 +125,7 @@ verify\_kernel\_signatures
 
 创世区块
 
-## 重要操作：修剪
+## 重要操作
 
 cut\_through
 
@@ -139,6 +139,37 @@ cut\_through
     /// if a block contains a new coinbase output and
     /// is a transaction spending a previous coinbase
     /// we do not want to cut-through (all coinbase must be preserved)
+```
+
+hydrate\_from
+
+```
+	/// Hydrate a block from a compact block.
+	/// Note: caller must validate the block themselves, we do not validate it
+	/// here.
+```
+
+as\_compact\_block
+
+```
+/// Generate the compact block representation.
+```
+
+with\_reward
+
+```
+	/// Builds a new block ready to mine from the header of the previous block,
+	/// a vector of transactions and the reward information. Checks
+	/// that all transactions are valid and calculates the Merkle tree.
+
+```
+
+validate
+
+```
+	/// Validates all the elements in a block that can be checked without
+	/// additional data. Includes commitment sums and kernels, Merkle
+	/// trees, reward, etc.
 ```
 
 
