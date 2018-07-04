@@ -1,3 +1,5 @@
+Communicates with the Grin server
+
 ## Web 框架
 
 **iron**
@@ -22,6 +24,7 @@ hyper offers both an HTTP client and server which can be used to drive complex w
 
 ```rust
 /// Gets block details given either a hash or height.
+/// Optionally return results as "compact blocks" by passing "?compact" query param GET /v1/blocks/<hash>?compact
 get blocks
 
 /// Chain handler. Get the head details.
@@ -50,6 +53,9 @@ get txhashset/lastkernels
 
 // UTXO traversal::
 get txhashset/outputs?start_index=1&max=100
+
+// Build a merkle proof for a given pos
+get txhashset/merkleproof?n=1
 
 // Get basic information about the transaction pool.
 get pool

@@ -1,3 +1,5 @@
+Control the Grin server
+
 ## Server
 
 ```rust

@@ -1,3 +1,5 @@
+Wallet software for Grin
+
 ## FileWallet
 
 ```rust
