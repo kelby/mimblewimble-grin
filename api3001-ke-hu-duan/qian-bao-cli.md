@@ -37,12 +37,12 @@ OwnerAPIGetHandler
 
 pub struct OwnerAPIGetHandler<T, K>
 where
-	T: WalletBackend<K>,
-	K: Keychain,
+    T: WalletBackend<K>,
+    K: Keychain,
 {
-	/// Wallet instance
-	pub wallet: Arc<Mutex<T>>,
-	phantom: PhantomData<K>,
+    /// Wallet instance
+    pub wallet: Arc<Mutex<T>>,
+    phantom: PhantomData<K>,
 }
 ```
 
@@ -51,12 +51,12 @@ OwnerAPIPostHandler
 ```rust
 pub struct OwnerAPIPostHandler<T, K>
 where
-	T: WalletBackend<K>,
-	K: Keychain,
+    T: WalletBackend<K>,
+    K: Keychain,
 {
-	/// Wallet instance
-	pub wallet: Arc<Mutex<T>>,
-	phantom: PhantomData<K>,
+    /// Wallet instance
+    pub wallet: Arc<Mutex<T>>,
+    phantom: PhantomData<K>,
 }
 ```
 
@@ -74,12 +74,12 @@ ForeignAPIHandler
 
 pub struct ForeignAPIHandler<T, K>
 where
-	T: WalletBackend<K> + WalletClient,
-	K: Keychain,
+    T: WalletBackend<K> + WalletClient,
+    K: Keychain,
 {
-	/// Wallet instance
-	pub wallet: Arc<Mutex<T>>,
-	phantom: PhantomData<K>,
+    /// Wallet instance
+    pub wallet: Arc<Mutex<T>>,
+    phantom: PhantomData<K>,
 }
 ```
 
@@ -93,8 +93,6 @@ where
 
 //! Still experimental, not sure this is the best way to do this
 
-
-
 APIOwner
 
 ```rust
@@ -102,13 +100,13 @@ APIOwner
 /// the wallet/keychain that they're acting upon
 pub struct APIOwner<'a, W, K>
 where
-	W: 'a + WalletBackend<K> + WalletClient,
-	K: Keychain,
+    W: 'a + WalletBackend<K> + WalletClient,
+    K: Keychain,
 {
-	/// Wallet, contains its keychain (TODO: Split these up into 2 traits
-	/// perhaps)
-	pub wallet: &'a mut W,
-	phantom: PhantomData<K>,
+    /// Wallet, contains its keychain (TODO: Split these up into 2 traits
+    /// perhaps)
+    pub wallet: &'a mut W,
+    phantom: PhantomData<K>,
 }
 ```
 
@@ -119,13 +117,13 @@ APIForeign
 /// with other parties
 pub struct APIForeign<'a, W, K>
 where
-	W: 'a + WalletBackend<K> + WalletClient,
-	K: Keychain,
+    W: 'a + WalletBackend<K> + WalletClient,
+    K: Keychain,
 {
-	/// Wallet, contains its keychain (TODO: Split these up into 2 traits
-	/// perhaps)
-	pub wallet: &'a mut W,
-	phantom: PhantomData<K>,
+    /// Wallet, contains its keychain (TODO: Split these up into 2 traits
+    /// perhaps)
+    pub wallet: &'a mut W,
+    phantom: PhantomData<K>,
 }
 ```
 
@@ -143,15 +141,23 @@ where
 
 /// should care about communication details
 
-#### client 
+#### client
 
 通过 hyper 提供的接口向服务端发送请求。（直接使用 hyper，或使用 api::client 里的 GET/POST）
+
+## TX
+
+aggsig
+
+build
+
+proof
+
+reward
+
+slate
 
 ## 关系
 
 FileWallet &gt; WalletBackend/WalletClient &gt; OwnerAPIGetHandler/OwnerAPIPostHandler/OwnerAPIOptionsHandler/ForeignAPIHandler &gt; APIForeign/APIOwner
-
-
-
-
 
