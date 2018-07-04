@@ -53,23 +53,45 @@ txhashset txhashset::TxHashSet
 
 对其它区块链项目而言，“链”在概念上可以借鉴，但实现上不能直接参考。
 
-## 链的压缩
+#### 重要操作
+
+init
+
+```
+	/// Initializes the blockchain and returns a new Chain instance. Does a
+	/// check on the current chain head to make sure it exists and creates one
+	/// based on the genesis block if necessary.
+```
+
+process\_block\_no\_orphans
+
+```
+	/// Attempt to add a new block to the chain. Returns the new chain tip if it
+	/// has been added to the longest chain, None if it's added to an (as of
+	/// now) orphan chain.
+```
+
+validate
+
+```
+	/// Validate the current chain state.
+```
 
 compact
 
-```rust
-    /// Triggers chain compaction, cleaning up some unnecessary historical
-    /// information. We introduce a chain depth called horizon, which is
-    /// typically in the range of a couple days. Before that horizon, this
-    /// method will:
-    ///
-    /// * compact the MMRs data files and flushing the corresponding remove logs
-    /// * delete old records from the k/v store (older blocks, indexes, etc.)
-    ///
-    /// This operation can be resource intensive and takes some time to execute.
-    /// Meanwhile, the chain will not be able to accept new blocks. It should
-    /// therefore be called judiciously.
+```
+	/// Triggers chain compaction, cleaning up some unnecessary historical
+	/// information. We introduce a chain depth called horizon, which is
+	/// typically in the range of a couple days. Before that horizon, this
+	/// method will:
+	///
+	/// * compact the MMRs data files and flushing the corresponding remove logs
+	/// * delete old records from the k/v store (older blocks, indexes, etc.)
+	///
+	/// This operation can be resource intensive and takes some time to execute.
+	/// Meanwhile, the chain will not be able to accept new blocks. It should
+	/// therefore be called judiciously.
 ```
 
-
+其它操作也很重要，只是篇幅有限，这里挑几个出来讲解。
 
