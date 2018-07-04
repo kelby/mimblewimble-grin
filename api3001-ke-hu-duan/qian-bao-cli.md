@@ -1,5 +1,19 @@
 Wallet software for Grin
 
+    SUBCOMMANDS:
+        burn         ** TESTING ONLY ** Burns the provided amount to a known key. Similar to send but burns an output to
+                     allow single-party transactions.
+        help         Prints this message or the help of the given subcommand(s)
+        info         basic wallet contents summary
+        init         Initialize a new wallet seed file.
+        listen       Runs the wallet in listening mode waiting for transactions.
+        outputs      raw wallet info (list of outputs)
+        owner_api    Runs the wallet's local web API.
+        receive      Processes a JSON transaction file.
+        restore      Attempt to restore wallet contents from the chain using seed and password. NOTE: Backup wallet.*
+                     and run `wallet listen` before running restore.
+        send         Builds a transaction to send coins and sends it to the specified listener directly.
+
 ## FileWallet
 
 ```rust

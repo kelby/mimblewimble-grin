@@ -1,5 +1,14 @@
 Communicates with the Grin server
 
+```
+SUBCOMMANDS:
+    ban                   Ban peer
+    help                  Prints this message or the help of the given subcommand(s)
+    listconnectedpeers    Print a list of currently connected peers
+    status                Current status of the Grin chain
+    unban                 Unban peer
+```
+
 ## Web 框架
 
 **iron**

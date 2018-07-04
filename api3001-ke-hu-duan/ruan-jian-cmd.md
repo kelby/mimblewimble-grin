@@ -1,5 +1,13 @@
 Control the Grin server
 
+```
+SUBCOMMANDS:
+    help     Prints this message or the help of the given subcommand(s)
+    run      Run the Grin server in this console
+    start    Start the Grin server as a daemon
+    stop     Stop the Grin server daemon
+```
+
 ## Server
 
 ```rust
