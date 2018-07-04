@@ -146,5 +146,14 @@ const BLOCK_SUMS_PREFIX: u8 = 'M' as u8;
 const BLOCK_INPUT_BITMAP_PREFIX: u8 = 'B' as u8;
 ```
 
+## Committed
+
+```
+/// Implemented by types that hold inputs and outputs (and kernels)
+/// containing Pedersen commitments.
+/// Handles the collection of the commitments as well as their
+/// summing, taking potential explicit overages of fees into account.
+```
+
 
 
