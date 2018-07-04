@@ -127,7 +127,7 @@ where
 }
 ```
 
-#### WalletBackend
+## WalletBackend
 
 /// Wallets should implement this backend for their storage. All functions
 
@@ -135,7 +135,7 @@ where
 
 /// whatever credentials it needs
 
-#### WalletClient
+## WalletClient
 
 /// Encapsulate all communication functions. No functions within libwallet
 
@@ -144,6 +144,10 @@ where
 #### client
 
 通过 hyper 提供的接口向服务端发送请求。（直接使用 hyper，或使用 api::client 里的 GET/POST）
+
+//! Client functions, implementations of the WalletClient trait
+
+//! specific to the FileWallet
 
 ## TX
 
@@ -160,4 +164,8 @@ slate
 ## 关系
 
 FileWallet &gt; WalletBackend/WalletClient &gt; OwnerAPIGetHandler/OwnerAPIPostHandler/OwnerAPIOptionsHandler/ForeignAPIHandler &gt; APIForeign/APIOwner
+
+FileWallet &gt; TX
+
+
 
