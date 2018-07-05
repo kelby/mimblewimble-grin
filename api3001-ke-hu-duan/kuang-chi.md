@@ -4,7 +4,7 @@ Grin core contains an optional stratum server supporting multiple remote workers
 
 ## StratumServer
 
-矿池挖矿模式。
+远程挖矿模式。
 
 ```rust
 // Grin Stratum Server
