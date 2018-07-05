@@ -1,3 +1,7 @@
+Grin needs to support remote miners, and mining proxies/pools.
+
+Grin core contains an optional stratum server supporting multiple remote workers/pools.
+
 ## StratumServer
 
 矿池挖矿模式。
