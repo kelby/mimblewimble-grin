@@ -37,5 +37,17 @@ use common::stats::{DiffBlock, DiffStats, PeerStats, ServerStateInfo, ServerStat
 use common::types::{Error, Seeding, ServerConfig, StratumServerConfig};
 ```
 
+## tui-rs
+
+Build terminal user interfaces and dashboards using Rust.
+
+tui-rs is a Rust library to build rich terminal user interfaces and dashboards. It is heavily inspired by the Javascript library blessed-contrib and the Go library termui.
+
+## Cursive
+
+A Text User Interface library for the Rust programming language.
+
+It allows you to build rich user interfaces for terminal applications.
+
 
 
