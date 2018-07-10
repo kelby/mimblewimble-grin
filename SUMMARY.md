@@ -65,6 +65,7 @@
 * [数学/密码学](shu-xue-3001-mi-ma-xue.md)
   * [Pedersen Commitment](shu-xue-3001-mi-ma-xue/pedersen-commitment.md)
   * [PMMR](chapter1/pmmr.md)
+  * [MerkleProof](shu-xue-3001-mi-ma-xue/merkleproof.md)
   * [RangeProof](shu-xue-3001-mi-ma-xue/rangeproof.md)
   * [Aggregate Signatures](shu-xue-3001-mi-ma-xue/aggregate-signatures.md)
   * [Elliptic Curve Cryptography \(ECC\)](shu-xue-3001-mi-ma-xue/elliptic-curve-cryptography-ecc.md)
@@ -73,5 +74,4 @@
   * [Schnorr signature](shu-xue-3001-mi-ma-xue/schnorr-signature.md)
   * [BLAKE2](shu-xue-3001-mi-ma-xue/blake2.md)
   * [Merkle Tree](shu-xue-3001-mi-ma-xue/merkle-tree.md)
-  * [keychain](shu-xue-3001-mi-ma-xue/keychain.md)
 
