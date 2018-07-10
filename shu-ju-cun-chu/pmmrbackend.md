@@ -89,5 +89,19 @@ pub struct AppendOnlyFile {
 }
 ```
 
+## PMMRHandle
+
+通过 PMMRHandle 提供给 TxHashSet 使用，进而影响整个系统。
+
+```
+struct PMMRHandle<T>
+where
+	T: PMMRable,
+{
+	backend: PMMRBackend<T>,
+	last_pos: u64,
+}
+```
+
 
 
