@@ -18,30 +18,37 @@ total\_kernel\_offset: BlindingFactor \# 从创世区块到当前的 kernel offs
 /// Block header, fairly standard compared to other blockchains.
 #[derive(Clone, Debug, PartialEq)]
 pub struct BlockHeader {
-    /// Version of the block
-    pub version: u16,
-    /// Height of this block since the genesis block (height 0)
-    pub height: u64,
-    /// Hash of the block previous to this in the chain.
-    pub previous: Hash,
-    /// Timestamp at which the block was built.
-    pub timestamp: time::Tm,
-    /// Total accumulated difficulty since genesis block
-    pub total_difficulty: Difficulty,
-    /// Merklish root of all the commitments in the TxHashSet
-    pub output_root: Hash,
-    /// Merklish root of all range proofs in the TxHashSet
-    pub range_proof_root: Hash,
-    /// Merklish root of all transaction kernels in the TxHashSet
-    pub kernel_root: Hash,
-    /// Total accumulated sum of kernel offsets since genesis block.
-    /// We can derive the kernel offset sum for *this* block from
-    /// the total kernel offset of the previous block header.
-    pub total_kernel_offset: BlindingFactor,
-    /// Nonce increment used to mine this block.
-    pub nonce: u64,
-    /// Proof of work data.
-    pub pow: Proof,
+	/// Version of the block
+	pub version: u16,
+	/// Height of this block since the genesis block (height 0)
+	pub height: u64,
+	/// Hash of the block previous to this in the chain.
+	pub previous: Hash,
+	/// Timestamp at which the block was built.
+	pub timestamp: time::Tm,
+	/// Total accumulated difficulty since genesis block
+	pub total_difficulty: Difficulty,
+	/// Merklish root of all the commitments in the TxHashSet
+	pub output_root: Hash,
+	/// Merklish root of all range proofs in the TxHashSet
+	pub range_proof_root: Hash,
+	/// Merklish root of all transaction kernels in the TxHashSet
+	pub kernel_root: Hash,
+	/// Total accumulated sum of kernel offsets since genesis block.
+	/// We can derive the kernel offset sum for *this* block from
+	/// the total kernel offset of the previous block header.
+	pub total_kernel_offset: BlindingFactor,
+	/// Total accumulated sum of kernel commitments since genesis block.
+	/// Should always equal the UTXO commitment sum minus supply.
+	pub total_kernel_sum: Commitment,
+	/// Total size of the output MMR after applying this block
+	pub output_mmr_size: u64,
+	/// Total size of the kernel MMR after applying this block
+	pub kernel_mmr_size: u64,
+	/// Nonce increment used to mine this block.
+	pub nonce: u64,
+	/// Proof of work data.
+	pub pow: Proof,
 }
 ```
 
