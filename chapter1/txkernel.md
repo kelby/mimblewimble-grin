@@ -18,10 +18,10 @@ pub struct TxKernel {
     /// Remainder of the sum of all transaction commitments. If the transaction
     /// is well formed, amounts components should sum to zero and the excess
     /// is hence a valid public key.
-    pub excess: Commitment,
+    pub excess: Commitment, // 相当于公钥
     /// The signature proving the excess is a valid public key, which signs
     /// the transaction fee.
-    pub excess_sig: Signature, # 包含了 TxKernel 下面的其它 4 个元素
+    pub excess_sig: Signature, # 包含了 TxKernel 下面的其它 4 个元素，相当于签名
 }
 ```
 
@@ -43,7 +43,7 @@ excess 对应 k1G
 * 见证&签名
 * Trust model
 
-## 验证
+## verify 验证
 
 fee + lock\_height 是消息
 
