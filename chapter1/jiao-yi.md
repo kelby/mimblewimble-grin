@@ -1,3 +1,5 @@
+## Transaction
+
 ```rust
 /// A transaction
 #[derive(Serialize, Deserialize, Debug, Clone)]
