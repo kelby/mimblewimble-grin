@@ -23,13 +23,27 @@ Iron is a high level web framework built in and for Rust, built on **hyper**. Ir
 
 High level JSON/HTTP client API
 
-发送 GET、POST 请求。
+简单封装，实现发送 GET、POST 请求。
 
 hyper is a fast, safe HTTP implementation written in and for Rust.
 
 hyper offers both an HTTP client and server which can be used to drive complex web applications written entirely in Rust.
 
 ## RESTful API
+
+#### 信息包括
+
+blocks
+
+chain
+
+status
+
+txhashset
+
+pool
+
+peers
 
 ```rust
 /// Gets block details given either a hash or height.
@@ -82,20 +96,6 @@ get peers/a.b.c.d
 ```
 
 每个请求都有对应的 Handler 进行处理。
-
-#### 信息包括
-
-blocks
-
-chain
-
-status
-
-txhashset
-
-pool
-
-peers
 
 可以根据客户端需要，组合不同的数据结构。目前主要还是 GET 获取信息，没有 POST 等修改操作。
 

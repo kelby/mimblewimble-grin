@@ -20,11 +20,5 @@ struct OrphanBlockPool {
 
 #### 操作
 
-添加
-
-移除
-
-等
-
-
+添加、移除等。
 
