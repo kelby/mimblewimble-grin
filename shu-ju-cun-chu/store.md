@@ -27,7 +27,16 @@ where
 
 TxHashSet 会用到它，这是数据存储与区块链核心业务的链接之处（TxHashSet 被包含于 Chain）。
 
-## 
+## Store
+
+```
+/// LMDB-backed store facilitating data access and serialization. All writes
+/// are done through a Batch abstraction providing atomicity.
+pub struct Store {
+	env: Arc<lmdb::Environment>,
+	db: Arc<lmdb::Database<'static>>,
+}
+```
 
 
 
