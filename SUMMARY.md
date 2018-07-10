@@ -37,6 +37,7 @@
   * [3 种 Proof](chapter1/3-zhong-proof.md)
   * [3 个验证](chapter1/3-ge-zheng-ming.md)
   * [其它](chapter1/qi-ta.md)
+  * [ChainStore 和 Batch](chapter1/chainstore-he-batch.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件CMD](api3001-ke-hu-duan/ruan-jian-cmd.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
