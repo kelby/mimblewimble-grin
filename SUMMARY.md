@@ -62,6 +62,7 @@
   * [PeerStore](wang-luo-chuan-shu/peerstore.md)
   * [store](shu-ju-cun-chu/store.md)
   * [PMMRBackend](shu-ju-cun-chu/pmmrbackend.md)
+  * [LMDB](shu-ju-cun-chu/lmdb.md)
 * [数学/密码学](shu-xue-3001-mi-ma-xue.md)
   * [Pedersen Commitment](shu-xue-3001-mi-ma-xue/pedersen-commitment.md)
   * [PMMR](chapter1/pmmr.md)
