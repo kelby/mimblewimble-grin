@@ -45,6 +45,22 @@ pool
 
 peers
 
+> /// Start all server HTTP handlers. Register all of them with Iron
+>
+> /// and runs the corresponding HTTP server.
+>
+> ///
+>
+> /// Hyper currently has a bug that prevents clean shutdown. In order
+>
+> /// to avoid having references kept forever by handlers, we only pass
+>
+> /// weak references. Note that this likely means a crash if the handlers are
+>
+> /// used after a server shutdown \(which should normally never happen,
+>
+> /// except during tests\).
+
 ```rust
 /// Gets block details given either a hash or height.
 /// Optionally return results as "compact blocks" by passing "?compact" query param GET /v1/blocks/<hash>?compact
@@ -110,6 +126,40 @@ get peers/a.b.c.d
 * p2p::Peers 网络节点
 
 * pool::TransactionPool 交易池
+
+#### 方便开发，创建数据结构
+
+Tip /// The state of the current fork tip
+
+Status /// Status page containing different server information
+
+TxHashSet /// TxHashSet
+
+TxHashSetNode /// Wrapper around a list of txhashset nodes, so it can be /// presented properly via json
+
+Output
+
+PrintableCommitment
+
+OutputPrintable // As above, except formatted a bit better for human viewing
+
+TxKernelPrintable // Printable representation of a block
+
+BlockHeaderInfo // Just the information required for wallet reconstruction
+
+BlockHeaderPrintable
+
+BlockPrintable // Printable representation of a block
+
+CompactBlockPrintable
+
+BlockOutputs // For wallet reconstruction, include the header info along with the // transactions in the block
+
+OutputListing // For traversing all outputs in the UTXO set // transactions in the block
+
+PoolInfo
+
+
 
 
 

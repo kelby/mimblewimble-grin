@@ -1,4 +1,4 @@
-## ChainKVStore
+## ~~ChainKVStore~~
 
 主要对和“链”相关的元素进行增、删、查。
 
