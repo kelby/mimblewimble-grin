@@ -69,6 +69,8 @@ All outputs include a Pedersen commitment of the form`r*G + v*H`with`r`the blind
 pub struct Commitment(pub [u8; constants::PEDERSEN_COMMITMENT_SIZE]);
 ```
 
+合理运用它，可以做多种不同类型的事情。
+
 #### RangeProof
 
 \# 使用频率次之

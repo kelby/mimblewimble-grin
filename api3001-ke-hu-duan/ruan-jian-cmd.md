@@ -49,3 +49,32 @@ A Text User Interface library for the Rust programming language.
 
 It allows you to build rich user interfaces for terminal applications.
 
+#### dandelion\_monitor
+
+```
+/// A process to monitor transactions in the stempool.
+/// With Dandelion, transaction can be broadcasted in stem or fluff phase.
+/// When sent in stem phase, the transaction is relayed to only node: the
+/// dandelion relay. In order to maintain reliability a timer is started for
+/// each transaction sent in stem phase. This function will monitor the
+/// stempool and test if the timer is expired for each transaction. In that case
+/// the transaction will be sent in fluff phase (to multiple peers) instead of
+/// sending only to the peer relay.
+
+```
+
+#### seed
+
+```
+//! Mining plugin manager, using the cuckoo-miner crate to provide
+//! a mining worker implementation
+```
+
+#### Syncer
+
+```
+/// Starts the syncing loop, just spawns two threads that loop forever
+```
+
+
+
