@@ -18,7 +18,7 @@ pub struct Chain {
     adapter: Arc<ChainAdapter>, // 网络传输
 
     head: Arc<Mutex<Tip>>, // 基本信息
-    orphans: Arc<OrphanBlockPool>, // 孤儿
+    orphans: Arc<OrphanBlockPool>, // 孤儿，分叉链管理
     txhashset_lock: Arc<Mutex<bool>>,
     txhashset: Arc<RwLock<txhashset::TxHashSet>>, // 关键信息
 
@@ -29,11 +29,11 @@ pub struct Chain {
 
 ## 元数据
 
-db\_root String
+只有两项：
 
 head Tip
 
-等
+txhashset TxHashSet
 
 ## 关联对象
 
@@ -98,18 +98,18 @@ compact
 txhashset\_read
 
 ```
-	/// Provides a reading view into the current txhashset state as well as
-	/// the required indexes for a consumer to rewind to a consistent state
-	/// at the provided block hash.
+    /// Provides a reading view into the current txhashset state as well as
+    /// the required indexes for a consumer to rewind to a consistent state
+    /// at the provided block hash.
 ```
 
 txhashset\_write
 
 ```
-	/// Writes a reading view on a txhashset state that's been provided to us.
-	/// If we're willing to accept that new state, the data stream will be
-	/// read as a zip file, unzipped and the resulting state files should be
-	/// rewound to the provided indexes.
+    /// Writes a reading view on a txhashset state that's been provided to us.
+    /// If we're willing to accept that new state, the data stream will be
+    /// read as a zip file, unzipped and the resulting state files should be
+    /// rewound to the provided indexes.
 ```
 
 其它操作也很重要，只是篇幅有限，这里挑几个出来讲解。

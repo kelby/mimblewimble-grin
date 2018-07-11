@@ -74,6 +74,8 @@ get chain/compact
 
 /// Chain validation handler.
 get chain/validate
+
+// Supports retrieval of multiple outputs in a single request
 get chain/outputs
 
 /// Temporary - fix header by height index.
@@ -158,8 +160,4 @@ BlockOutputs // For wallet reconstruction, include the header info along with th
 OutputListing // For traversing all outputs in the UTXO set // transactions in the block
 
 PoolInfo
-
-
-
-
 

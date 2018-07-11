@@ -29,6 +29,8 @@ pub struct Block {
 }
 ```
 
+从“转账”的角度出发，区块拥有输入、输出、TxKernel，它就是一个大的交易！
+
 ## A block is simply built from:
 
 * A block header.
@@ -144,9 +146,9 @@ cut\_through
 hydrate\_from
 
 ```
-	/// Hydrate a block from a compact block.
-	/// Note: caller must validate the block themselves, we do not validate it
-	/// here.
+    /// Hydrate a block from a compact block.
+    /// Note: caller must validate the block themselves, we do not validate it
+    /// here.
 ```
 
 as\_compact\_block
@@ -158,18 +160,17 @@ as\_compact\_block
 with\_reward
 
 ```
-	/// Builds a new block ready to mine from the header of the previous block,
-	/// a vector of transactions and the reward information. Checks
-	/// that all transactions are valid and calculates the Merkle tree.
-
+    /// Builds a new block ready to mine from the header of the previous block,
+    /// a vector of transactions and the reward information. Checks
+    /// that all transactions are valid and calculates the Merkle tree.
 ```
 
 validate
 
 ```
-	/// Validates all the elements in a block that can be checked without
-	/// additional data. Includes commitment sums and kernels, Merkle
-	/// trees, reward, etc.
+    /// Validates all the elements in a block that can be checked without
+    /// additional data. Includes commitment sums and kernels, Merkle
+    /// trees, reward, etc.
 ```
 
 
