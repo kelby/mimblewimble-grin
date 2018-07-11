@@ -1,8 +1,8 @@
-Cuckoo Cycle
+## Cuckoo Cycle
 
 使用概念：
 
-环和边
+#### 环和边
 
 ```rust
 /// An edge in the Cuckoo graph, simply references two u64 nodes.
@@ -23,6 +23,4 @@ pub struct Cuckoo {
 具体步骤：
 
 略.
-
-
 

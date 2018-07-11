@@ -10,6 +10,8 @@ SUBCOMMANDS:
 
 ## Server
 
+启动、停止，运行软件，功能比较简单。
+
 ```rust
 /// Grin server holding internal structures.
 pub struct Server {
@@ -60,7 +62,6 @@ It allows you to build rich user interfaces for terminal applications.
 /// stempool and test if the timer is expired for each transaction. In that case
 /// the transaction will be sent in fluff phase (to multiple peers) instead of
 /// sending only to the peer relay.
-
 ```
 
 #### seed
