@@ -47,6 +47,7 @@
     * [HTTPWalletClient](api3001-ke-hu-duan/qian-bao-cli/httpwalletclient.md)
     * [FileWallet](api3001-ke-hu-duan/qian-bao-cli/filewallet.md)
     * [LMDBBackend 和 Batch](api3001-ke-hu-duan/qian-bao-cli/lmdbbackend-he-batch.md)
+    * [WalletBackend 和 WalletClient](api3001-ke-hu-duan/qian-bao-cli/walletbackend-he-walletclient.md)
   * [身份相关](api3001-ke-hu-duan/gong-yao-3001-si-yao-3001-di-zhi.md)
   * [数学/密码学相关](api3001-ke-hu-duan/jia-mi-3001-qian-ming.md)
   * [区块链相关](api3001-ke-hu-duan/jiao-yi.md)
