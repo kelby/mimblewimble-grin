@@ -1,5 +1,7 @@
 ## PMMR
 
+一种数据结构。
+
 ```
 /// Prunable Merkle Mountain Range implementation. All positions within the tree
 /// start at 1 as they're postorder tree traversal positions rather than array
@@ -10,14 +12,14 @@
 /// we are in the sequence of nodes making up the MMR.
 pub struct PMMR<'a, T, B>
 where
-	T: PMMRable,
-	B: 'a + Backend<T>,
+    T: PMMRable,
+    B: 'a + Backend<T>,
 {
-	/// The last position in the PMMR
-	pub last_pos: u64,
-	backend: &'a mut B,
-	// only needed to parameterise Backend
-	_marker: marker::PhantomData<T>,
+    /// The last position in the PMMR
+    pub last_pos: u64,
+    backend: &'a mut B,
+    // only needed to parameterise Backend
+    _marker: marker::PhantomData<T>,
 }
 ```
 
@@ -55,5 +57,5 @@ validate
 /// Walks all unpruned nodes in the MMR and revalidate all parent hashes
 ```
 
-
+可能过 txhaseset Extension 进而与系统交互，实现其功能。
 

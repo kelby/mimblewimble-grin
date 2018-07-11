@@ -63,7 +63,6 @@
 * [数据存储](shu-ju-cun-chu.md)
   * [DB](shu-ju-cun-chu/db.md)
   * [ORM](shu-ju-cun-chu/orm.md)
-  * [ChainKVStore](chapter1/chainkvstore.md)
   * [ChainStore 和 Batch](chapter1/chainstore-he-batch.md)
   * [PeerStore](wang-luo-chuan-shu/peerstore.md)
   * [store](shu-ju-cun-chu/store.md)
