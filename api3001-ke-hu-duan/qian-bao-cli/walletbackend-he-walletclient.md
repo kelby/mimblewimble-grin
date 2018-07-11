@@ -15,6 +15,8 @@
 
 ## controller
 
+//! Controller for wallet.. instantiates and handles listeners \(or single-run //! invocations\) as needed.
+
 #### OwnerAPIGetHandler
 
 ```
@@ -22,14 +24,14 @@
 
 pub struct OwnerAPIGetHandler<T: ?Sized, C, K>
 where
-	T: WalletBackend<C, K>,
-	C: WalletClient,
-	K: Keychain,
+    T: WalletBackend<C, K>,
+    C: WalletClient,
+    K: Keychain,
 {
-	/// Wallet instance
-	pub wallet: Arc<Mutex<Box<T>>>,
-	phantom: PhantomData<K>,
-	phantom_c: PhantomData<C>,
+    /// Wallet instance
+    pub wallet: Arc<Mutex<Box<T>>>,
+    phantom: PhantomData<K>,
+    phantom_c: PhantomData<C>,
 }
 ```
 
@@ -39,14 +41,14 @@ where
 /// Handles all owner API POST requests
 pub struct OwnerAPIPostHandler<T: ?Sized, C, K>
 where
-	T: WalletBackend<C, K>,
-	C: WalletClient,
-	K: Keychain,
+    T: WalletBackend<C, K>,
+    C: WalletClient,
+    K: Keychain,
 {
-	/// Wallet instance
-	pub wallet: Arc<Mutex<Box<T>>>,
-	phantom: PhantomData<K>,
-	phantom_c: PhantomData<C>,
+    /// Wallet instance
+    pub wallet: Arc<Mutex<Box<T>>>,
+    phantom: PhantomData<K>,
+    phantom_c: PhantomData<C>,
 }
 ```
 
@@ -64,14 +66,14 @@ pub struct OwnerAPIOptionsHandler {}
 
 pub struct ForeignAPIHandler<T: ?Sized, C, K>
 where
-	T: WalletBackend<C, K>,
-	C: WalletClient,
-	K: Keychain,
+    T: WalletBackend<C, K>,
+    C: WalletClient,
+    K: Keychain,
 {
-	/// Wallet instance
-	pub wallet: Arc<Mutex<Box<T>>>,
-	phantom: PhantomData<K>,
-	phantom_c: PhantomData<C>,
+    /// Wallet instance
+    pub wallet: Arc<Mutex<Box<T>>>,
+    phantom: PhantomData<K>,
+    phantom_c: PhantomData<C>,
 }
 ```
 
