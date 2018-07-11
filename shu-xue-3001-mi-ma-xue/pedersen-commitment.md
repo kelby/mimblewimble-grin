@@ -60,23 +60,27 @@ All outputs include a Pedersen commitment of the form`r*G + v*H`with`r`the blind
 
 ## 实际使用中的数据结构
 
-Commitment \# 使用频率最多
+#### Commitment
+
+\# 使用频率最多
 
 ```
 /// A Pedersen commitment
 pub struct Commitment(pub [u8; constants::PEDERSEN_COMMITMENT_SIZE]);
 ```
 
-RangeProof \# 使用频率次之
+#### RangeProof
+
+\# 使用频率次之
 
 ```
 /// A range proof. Typically much larger in memory that the above (~5k).
 #[derive(Copy)]
 pub struct RangeProof {
-	/// The proof itself, at most 5134 bytes long
-	pub proof: [u8; constants::MAX_PROOF_SIZE],
-	/// The length of the proof
-	pub plen: usize,
+    /// The proof itself, at most 5134 bytes long
+    pub proof: [u8; constants::MAX_PROOF_SIZE],
+    /// The length of the proof
+    pub plen: usize,
 }
 ```
 
