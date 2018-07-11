@@ -13,21 +13,17 @@ OutputFeatures \# 来源标记。来自普通交易，还是 Coinbase？根据�
 
 Commitment \# 之前输出的 Commitment
 
-block\_hash \# 之前的输出来源于哪个块？非必选
-
-MerkleProof \# 证明之前存在且本块其它交易未花费（这里是第一次使用）。非必选
-
 ```rust
 /// A transaction input.
 ///
 /// Primarily a reference to an output being spent by the transaction.
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Input {
-	/// The features of the output being spent.
-	/// We will check maturity for coinbase output.
-	pub features: OutputFeatures,
-	/// The commit referencing the output being spent.
-	pub commit: Commitment,
+    /// The features of the output being spent.
+    /// We will check maturity for coinbase output.
+    pub features: OutputFeatures,
+    /// The commit referencing the output being spent.
+    pub commit: Commitment,
 }
 ```
 
