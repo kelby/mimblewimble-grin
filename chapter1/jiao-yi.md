@@ -1,5 +1,7 @@
 ## Transaction
 
+输入是输出的简单引用，输出包含了交易金额，TxKernel 包含了手续费和签名。
+
 ```rust
 /// A transaction
 #[derive(Serialize, Deserialize, Debug, Clone)]
