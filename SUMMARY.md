@@ -52,7 +52,7 @@
 * [数据存储](shu-ju-cun-chu.md)
   * [ChainStore 和 Batch](chapter1/chainstore-he-batch.md)
   * [PeerStore](wang-luo-chuan-shu/peerstore.md)
-  * [PMMR](chapter1/pmmr.md)
+  * [PMMR 和 PMMRHandle](chapter1/pmmr.md)
   * [PMMRHandle](chapter1/pmmrhandle.md)
   * [PMMRBackend](shu-ju-cun-chu/pmmrbackend.md)
   * [MerkleProof](shu-xue-3001-mi-ma-xue/merkleproof.md)
