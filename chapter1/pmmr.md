@@ -94,7 +94,7 @@ const BLOCK_INPUT_BITMAP_PREFIX: u8 = 'B' as u8;
 
 ## 两个概念解析
 
-PMMR 和 PMMRHandle 差不多，都是 &lt;T, B&gt; 结构，T 表示要存储的数据，B 表示存储实现。不同点在于前者还没有明确 B，而后者明确了，就是用 PMMRBackend。
+PMMR 和 PMMRHandle 差不多，都是 &lt;T, B&gt; 结构，T 表示要存储的数据，B 表示存储实现。不同点在于前者还没有明确 B，而后者已明确使用 PMMRBackend。
 
 它们的数据结构能直接证明上述描述，Extension 和 TxHashSet 能间接证明上述描述。
 
