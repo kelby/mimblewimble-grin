@@ -2,7 +2,7 @@
 
 默克尔树证明
 
-来源于 MMR，高于 MMR
+数据来源于 MMR，但其意义高于 MMR。
 
 ```
 /// A Merkle proof that proves a particular element exists in the MMR.
