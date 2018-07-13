@@ -12,5 +12,20 @@ pub struct MerkleProof {
 }
 ```
 
+verify
+
+```
+	/// Verifies the Merkle proof against the provided
+	/// root hash, element and position in the MMR.
+```
+
+verify\_consume
+
+```
+	/// Consumes the Merkle proof while verifying it.
+	/// The proof can no longer beused by the caller after dong this.
+	/// Caller must clone() the proof first.
+```
+
 
 
