@@ -1,5 +1,7 @@
 ## MerkleProof
 
+来源于 MMR，高于 MMR
+
 ```
 /// A Merkle proof that proves a particular element exists in the MMR.
 #[derive(Serialize, Deserialize, Debug, Eq, PartialEq, Clone, PartialOrd, Ord)]
@@ -15,16 +17,16 @@ pub struct MerkleProof {
 verify
 
 ```
-	/// Verifies the Merkle proof against the provided
-	/// root hash, element and position in the MMR.
+    /// Verifies the Merkle proof against the provided
+    /// root hash, element and position in the MMR.
 ```
 
 verify\_consume
 
 ```
-	/// Consumes the Merkle proof while verifying it.
-	/// The proof can no longer beused by the caller after dong this.
-	/// Caller must clone() the proof first.
+    /// Consumes the Merkle proof while verifying it.
+    /// The proof can no longer beused by the caller after dong this.
+    /// Caller must clone() the proof first.
 ```
 
 
