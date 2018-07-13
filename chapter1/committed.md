@@ -21,12 +21,18 @@ sum\_commitments
 
 ```
 /// Gathers commitments and sum them.
+
+/// Utility to sum positive and negative commitments, eliminating zero values
 ```
 
 sum\_kernel\_excesses
 
 ```
 /// Gather the kernel excesses and sum them.
+
+/// Utility function to take sets of positive and negative kernel offsets as
+/// blinding factors, convert them to private key filtering zero values and
+/// summing all of them. Useful to build blocks.
 ```
 
 
