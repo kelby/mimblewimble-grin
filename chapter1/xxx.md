@@ -31,6 +31,8 @@ pub struct Block {
 
 从“转账”的角度出发，区块拥有输入、输出、TxKernel，它就是一个大的交易！
 
+> 区块里的输入、输出并不完全“拷贝”其下面的交易，它们做 cut\_through 操作。即把有相同 commitment 的输入、输出修剪掉。
+
 ## A block is simply built from:
 
 * A block header.
