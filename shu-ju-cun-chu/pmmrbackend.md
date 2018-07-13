@@ -27,7 +27,7 @@ where
 }
 ```
 
-实现了 core pmmr 给出的 trait Backend
+不仅要实现 core pmmr 给出的 trait Backend，还要实现自身希望提供的功能，可以说任务艰巨。
 
 #### LeafSet
 
