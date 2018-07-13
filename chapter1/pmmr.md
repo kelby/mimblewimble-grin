@@ -61,3 +61,13 @@ validate
 
 可能过 txhaseset Extension 进而与系统交互，实现其功能。
 
+## 相关概念解析
+
+PMMR 和 PMMRHandle 差不多，都是 &lt;T, B&gt; 结构，T 表示要存储的数据，B 表示存储实现。不同点在于前者还没有明确 B，而后者明确了，就是用 PMMRBackend。
+
+它们的数据结构能直接证明上述描述，Extension 和 TxHashSet 能间接证明上述描述。
+
+Backend 约等于 PMMRBackend，前者是接口，后者是具体实现。
+
+MerkleProof 来源于 MMR，但高于 MMR。具体是其数据来源于 MMR，但其用于及意义高于 MMR。
+
