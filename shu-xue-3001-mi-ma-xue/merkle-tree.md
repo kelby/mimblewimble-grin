@@ -20,5 +20,3 @@ Node(p) = Blake2b(m | Node(left_child(p)) | Node(right_child(p)))
 
 
 
-
-
