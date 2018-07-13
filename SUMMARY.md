@@ -53,7 +53,6 @@
   * [ChainStore 和 Batch](chapter1/chainstore-he-batch.md)
   * [PeerStore](wang-luo-chuan-shu/peerstore.md)
   * [PMMR 和 PMMRHandle](chapter1/pmmr.md)
-  * [PMMRHandle](chapter1/pmmrhandle.md)
   * [PMMRBackend](shu-ju-cun-chu/pmmrbackend.md)
   * [MerkleProof](shu-xue-3001-mi-ma-xue/merkleproof.md)
   * [LMDB - Store 和 Batch](shu-ju-cun-chu/lmdb.md)
