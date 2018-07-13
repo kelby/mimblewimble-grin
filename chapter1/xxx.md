@@ -131,6 +131,8 @@ verify\_kernel\_signatures
 
 ## 重要操作
 
+构建、验证、和 compact\_block 相互转换，修剪（cut\_through）等。
+
 cut\_through
 
 ```rust
