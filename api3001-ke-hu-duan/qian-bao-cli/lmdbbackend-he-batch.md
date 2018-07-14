@@ -25,7 +25,7 @@ const DERIV_PREFIX: u8 = 'd' as u8;
 const CONFIRMED_HEIGHT_PREFIX: u8 = 'c' as u8;
 ```
 
-## Batch
+#### Batch
 
 ```
 /// An atomic batch in which all changes can be committed all at once or
