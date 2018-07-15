@@ -67,4 +67,5 @@
   * [Schnorr signature](shu-xue-3001-mi-ma-xue/schnorr-signature.md)
   * [BLAKE2](shu-xue-3001-mi-ma-xue/blake2.md)
   * [keychain](shu-xue-3001-mi-ma-xue/keychain.md)
+  * [Cuckoo](shu-xue-3001-mi-ma-xue/cuckoo.md)
 

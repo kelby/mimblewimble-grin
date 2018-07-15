@@ -129,6 +129,8 @@ get peers/a.b.c.d
 
 * pool::TransactionPool 交易池
 
+* pool::BlockChain 与交易池交互（间接与区块链交互）
+
 #### 方便开发，创建数据结构
 
 Tip /// The state of the current fork tip

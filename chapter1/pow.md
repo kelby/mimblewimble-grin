@@ -1,18 +1,3 @@
-## Cuckoo Cycle
-
-使用概念：
-
-#### 环和边
-
-```rust
-/// Cuckoo cycle context
-pub struct Cuckoo {
-	mask: u64,
-	size: u64,
-	v: [u64; 4],
-}
-```
-
 ```
 /// Miner for the Cuckoo Cycle algorithm. While the verifier will work for
 /// graph sizes up to a u64, the miner is limited to u32 to be more memory
@@ -27,7 +12,7 @@ pub struct Miner {
 }
 ```
 
-具体步骤：
+Cuckoo Cycle 知识参考数学/密码学对应部分。
 
-略.
+具体步骤：略.
 
