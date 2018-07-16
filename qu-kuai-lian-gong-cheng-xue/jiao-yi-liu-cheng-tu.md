@@ -18,7 +18,7 @@
 
 8: Calculate total blinding excess sum for all inputs and outputs \*\*xS\*\* \(private scalar\)
 
-9: Select a random nonce \*\*kS\*\* \(private scalar\)
+9: Select a random nonce \*\*kS\*\* \(private scalar\) 发送方随机数
 
 10: Multiply \*\*xS\*\* and \*\*kS\*\* by generator G to create public curve points \*\*xSG\*\* and \*\*kSG\*\*
 
@@ -32,13 +32,13 @@
 
 4: Calculate message \*\*M\*\* = \*\*fee \| lock\_height \*\*
 
-5: Choose random nonce \*\*kR\*\* \(private scalar\)
+5: Choose random nonce \*\*kR\*\* \(private scalar\) 接收方随机数
 
 6: Multiply \*\*xR\*\* and \*\*kR\*\* by generator G to create public curve points \*\*xRG\*\* and \*\*kRG\*\*
 
 7: Compute Schnorr challenge \*\*e\*\* = Blake2\(\*\*M\*\* \| \*\*kRG\*\* + \*\*kSG\*\*\)
 
-8: Compute Recipient Schnorr signature \*\*sR\*\* = \*\*kR\*\* + \*\*e\*\* \* \*\*xR\*\*
+8: Compute Recipient Schnorr signature \*\*sR\*\* = \*\*kR\*\* + \*\*e\*\* \* \*\*xR\*\* \(接收方需要 Schnorr 签名\)
 
 ## 发送方确认
 
@@ -48,13 +48,13 @@
 
 3: Verify \*\*sR\*\* by verifying \*\*kRG\*\* + \*\*e\*\* \* \*\*xRG\*\* = \*\*sRG\*\* \(根据接收方初始化第 8 步很容易验证\)
 
-4: Compute Sender Schnorr signature \*\*sS\*\* = \*\*kS\*\* + \*\*e\*\* \* \*\*xS\*\*
+4: Compute Sender Schnorr signature \*\*sS\*\* = \*\*kS\*\* + \*\*e\*\* \* \*\*xS\*\* \(发送方需要 Schnorr 签名\)
 
 ## 接收方确认
 
 1: Verify \*\*sS\*\* by verifying \*\*kSG\*\* + \*\*e\*\* \* \*\*xSG\*\* = \*\*sSG\*\* \(根据发送方第 4 步很容易验证\)
 
-2: Calculate final signature \*\*s\*\* = \(\*\*sS\*\*+\*\*sR\*\*, \*\*kSG\*\*+\*\*kRG\*\*\) 最终签名
+2: Calculate final signature \*\*s\*\* = \(\*\*sS\*\*+\*\*sR\*\*, \*\*kSG\*\*+\*\*kRG\*\*\) 最终签名由两个 Schnorr 签名和两个 nonce 公钥组成
 
 3: Calculate public key for \*\*s\*\*: \*\*xG\*\* = \*\*xRG\*\* + \*\*xSG\*\* \(最终公钥，根据输出 commit + 输入 commit 而来\)
 
