@@ -6,15 +6,13 @@
 
 3: Select \*\*inputs\*\* using desired selection strategy
 
-4: Create \*\*change\_output\*\* 
+4: Create \*\*change\_output\*\*
 
 5: Select blinding factor for \*\*change\_output\*\*
 
-
-
 6: Calculate \*\*tx\_weight\*\*: MAX\(-1 \* \*\*num\_inputs\*\* + 4 \* \*\*num\_change\_outputs\*\* + 1, 1\)
 
-  \(+1 covers a single output on the receiver's side\)
+\(+1 covers a single output on the receiver's side\)
 
 7: Calculate \*\*fee\*\*:  \*\*tx\_weight\*\* \* 1\_000\_000 nG
 
@@ -32,8 +30,6 @@
 
 3: Choose random blinding factor for \*\*receiver\_output\*\* \*\*xR\*\* \(private scalar\)
 
-
-
 4: Calculate message \*\*M\*\* = \*\*fee \| lock\_height \*\*
 
 5: Choose random nonce \*\*kR\*\* \(private scalar\)
@@ -43,8 +39,6 @@
 7: Compute Schnorr challenge \*\*e\*\* = Blake2\(\*\*M\*\* \| \*\*kRG\*\* + \*\*kSG\*\*\)
 
 8: Compute Recipient Schnorr signature \*\*sR\*\* = \*\*kR\*\* + \*\*e\*\* \* \*\*xR\*\*
-
-
 
 ## 发送方确认
 
@@ -68,13 +62,11 @@
 
 4: Create Transaction Kernel Containing:
 
-   Signature \*\*s\*\* 
+Signature \*\*s\*\* \(对应 TxKernel 里的 excess\_sig\)
 
-   Public key \*\*xG\*\*
+Public key \*\*xG\*\* \(对应 TxKernel 里的 excess\)
 
-   \*\*fee\*\*
+\*\*fee\*\*
 
-   \*\*lock\_height\*\*
-
-
+\*\*lock\_height\*\*
 
