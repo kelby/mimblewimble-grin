@@ -12,6 +12,8 @@
 
 * 数学/密码学
 
+#### 模块间调用
+
 模块之间，可通过创建其关联对象进行互相调用。
 
 API/客户端 - 调用 chain::Chain、p2p::Peers、pool::TransactionPool、pool::BlockChain、store::Store
