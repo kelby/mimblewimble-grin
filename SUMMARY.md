@@ -29,7 +29,6 @@
   * [PoW 工作量证明](chapter1/pow.md)
   * [3 种 Proof](chapter1/3-zhong-proof.md)
   * [3 个验证](chapter1/3-ge-zheng-ming.md)
-* [区块链工程学](qu-kuai-lian-gong-cheng-xue.md)
 * [API/客户端](api3001-ke-hu-duan.md)
   * [软件CMD](api3001-ke-hu-duan/ruan-jian-cmd.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
@@ -68,4 +67,6 @@
   * [BLAKE2](shu-xue-3001-mi-ma-xue/blake2.md)
   * [keychain](shu-xue-3001-mi-ma-xue/keychain.md)
   * [Cuckoo](shu-xue-3001-mi-ma-xue/cuckoo.md)
+* [区块链工程学](qu-kuai-lian-gong-cheng-xue.md)
+  * [交易流程图](qu-kuai-lian-gong-cheng-xue/jiao-yi-liu-cheng-tu.md)
 
