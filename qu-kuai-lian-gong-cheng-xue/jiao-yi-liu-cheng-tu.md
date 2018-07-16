@@ -46,13 +46,13 @@
 
 2: Compute Schnorr challenge \*\*e\*\* = Blake2\(\*\*M\*\* \| \*\*kRG\*\* + \*\*kSG\*\*\)
 
-3: Verify \*\*sR\*\* by verifying \*\*kRG\*\* + \*\*e\*\* \* \*\*xRG\*\* = \*\*sRG\*\* ============================
+3: Verify \*\*sR\*\* by verifying \*\*kRG\*\* + \*\*e\*\* \* \*\*xRG\*\* = \*\*sRG\*\* \(根据接收方初始化第 8 步很容易验证\)
 
 4: Compute Sender Schnorr signature \*\*sS\*\* = \*\*kS\*\* + \*\*e\*\* \* \*\*xS\*\*
 
 ## 接收方确认
 
-1: Verify \*\*sS\*\* by verifying \*\*kSG\*\* + \*\*e\*\* \* \*\*xSG\*\* = \*\*sSG\*\* ============================
+1: Verify \*\*sS\*\* by verifying \*\*kSG\*\* + \*\*e\*\* \* \*\*xSG\*\* = \*\*sSG\*\* \(根据发送方第 4 步很容易验证\)
 
 2: Calculate final signature \*\*s\*\* = \(\*\*sS\*\*+\*\*sR\*\*, \*\*kSG\*\*+\*\*kRG\*\*\)
 
