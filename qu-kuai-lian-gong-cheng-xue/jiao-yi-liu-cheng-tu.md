@@ -54,9 +54,9 @@
 
 1: Verify \*\*sS\*\* by verifying \*\*kSG\*\* + \*\*e\*\* \* \*\*xSG\*\* = \*\*sSG\*\* \(根据发送方第 4 步很容易验证\)
 
-2: Calculate final signature \*\*s\*\* = \(\*\*sS\*\*+\*\*sR\*\*, \*\*kSG\*\*+\*\*kRG\*\*\)
+2: Calculate final signature \*\*s\*\* = \(\*\*sS\*\*+\*\*sR\*\*, \*\*kSG\*\*+\*\*kRG\*\*\) 最终签名
 
-3: Calculate public key for \*\*s\*\*: \*\*xG\*\* = \*\*xRG\*\* + \*\*xSG\*\*
+3: Calculate public key for \*\*s\*\*: \*\*xG\*\* = \*\*xRG\*\* + \*\*xSG\*\* \(最终公钥，根据输出 commit + 输入 commit 而来\)
 
 3: Verify \*\*s\*\* against excess values in final transaction using \*\*xG\*\*
 
@@ -64,7 +64,7 @@
 
 Signature \*\*s\*\* \(对应 TxKernel 里的 excess\_sig\)
 
-Public key \*\*xG\*\* \(对应 TxKernel 里的 excess\)
+Public key \*\*xG\*\* \(最终公钥，对应 TxKernel 里的 excess\)
 
 \*\*fee\*\*
 
