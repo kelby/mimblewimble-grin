@@ -12,19 +12,24 @@ MVC 里一个功能比较综合的“控制器”。
 /// Facade to the blockchain block processing pipeline and storage. Provides
 /// the current view of the TxHashSet according to the chain state. Also
 /// maintains locking for the pipeline to avoid conflicting processing.
+
+/// Facade to the blockchain block processing pipeline and storage. Provides
+/// the current view of the TxHashSet according to the chain state. Also
+/// maintains locking for the pipeline to avoid conflicting processing.
 pub struct Chain {
-    db_root: String,
-    store: Arc<ChainStore>, // 数据存储
-    adapter: Arc<ChainAdapter>, // 网络传输
+	db_root: String,
+	store: Arc<store::ChainStore>, // 数据存储
+	adapter: Arc<ChainAdapter>, // 网络传输
 
-    head: Arc<Mutex<Tip>>, // 基本信息
-    orphans: Arc<OrphanBlockPool>, // 孤儿，分叉链管理
-    txhashset_lock: Arc<Mutex<bool>>,
-    txhashset: Arc<RwLock<txhashset::TxHashSet>>, // 关键信息
-
-    // POW verification function
-    pow_verifier: fn(&BlockHeader, u8) -> bool,
+	head: Arc<Mutex<Tip>>, // 基本信息
+	orphans: Arc<OrphanBlockPool>, // 孤儿，分叉链管理
+	txhashset: Arc<RwLock<txhashset::TxHashSet>>, // 关键信息
+	// Recently processed blocks to avoid double-processing
+	block_hashes_cache: Arc<RwLock<VecDeque<Hash>>>,
+	// Recently processed headers to avoid double-processing
+	header_hashes_cache: Arc<RwLock<VecDeque<Hash>>>,
 }
+
 ```
 
 ## 元数据
