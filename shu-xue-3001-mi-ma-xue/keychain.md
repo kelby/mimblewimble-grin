@@ -50,6 +50,8 @@ pub struct BlindSum {
 
 #### Identifier
 
+The Identifier is a /// semi-opaque structure \(just bytes\) to track keys within the Keychain.
+
 ```
 pub struct Identifier([u8; IDENTIFIER_SIZE]);
 ```
@@ -58,11 +60,37 @@ pub struct Identifier([u8; IDENTIFIER_SIZE]);
 
 随机数，混淆因子
 
+BlindingFactor is a useful wrapper around a private key to help with /// commitment generation.
+
 ```
 pub struct BlindingFactor([u8; SECRET_KEY_SIZE]);
 ```
 
-## 
+#### Keychain
+
+trait 接口，需实现方法：
+
+from\_seed
+
+from\_random\_seed
+
+root\_key\_id
+
+derive\_key\_id
+
+derived\_key
+
+commit
+
+commit\_with\_key\_index
+
+blind\_sum
+
+sign
+
+sign\_with\_blinding
+
+secp
 
 
 
