@@ -88,15 +88,15 @@ secp
 
 ExtKeychain
 
-Identifier
+Identifier \*
 
-SecretKey
+SecretKey \*
 
-Commitment
+Commitment \*
 
-BlindingFactor
+BlindingFactor \*
 
-Signature
+Signature \*
 
 ChildKey
 
