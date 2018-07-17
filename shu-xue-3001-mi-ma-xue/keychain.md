@@ -102,5 +102,11 @@ ChildKey
 
 用到的密码学相关库：
 
-rand（随机），blake2 散列哈希，secp 椭圆曲线
+rand 随机
+
+blake2 散列哈希
+
+secp 椭圆曲线 \*
+
+
 
