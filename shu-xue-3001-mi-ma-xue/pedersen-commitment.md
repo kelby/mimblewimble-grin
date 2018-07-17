@@ -1,3 +1,14 @@
+## Commitment
+
+\# 使用频率最多
+
+```
+/// A Pedersen commitment
+pub struct Commitment(pub [u8; constants::PEDERSEN_COMMITMENT_SIZE]);
+```
+
+合理运用它，可以做多种不同类型的事情。
+
 **公钥签名 -&gt; 公钥验证**
 
 3个步骤：
@@ -58,35 +69,5 @@ Commit(x,r) + n = Commit(x + n,r)
 
 All outputs include a Pedersen commitment of the form`r*G + v*H`with`r`the blinding factor,`v`the value, and G and H two distinct generator points on the same curve group.
 
-## 实际使用中的数据结构
 
-#### Commitment
-
-\# 使用频率最多
-
-```
-/// A Pedersen commitment
-pub struct Commitment(pub [u8; constants::PEDERSEN_COMMITMENT_SIZE]);
-```
-
-合理运用它，可以做多种不同类型的事情。
-
-#### RangeProof
-
-\# 使用频率次之
-
-```
-/// A range proof. Typically much larger in memory that the above (~5k).
-#[derive(Copy)]
-pub struct RangeProof {
-    /// The proof itself, at most 5134 bytes long
-    pub proof: [u8; constants::MAX_PROOF_SIZE],
-    /// The length of the proof
-    pub plen: usize,
-}
-```
-
-ProofMessage
-
-ProofInfo
 
