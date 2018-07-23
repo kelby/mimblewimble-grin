@@ -15,10 +15,10 @@ Proof 与 Difficulty 比较：找到的数据，符合目标，即为成功。
     ///
     #[derive(Clone, PartialOrd, PartialEq)]
     pub struct Proof {
-    	/// Power of 2 used for the size of the cuckoo graph
-    	pub cuckoo_sizeshift: u8,
-    	/// The nonces
-    	pub nonces: Vec<u64>,
+        /// Power of 2 used for the size of the cuckoo graph
+        pub cuckoo_sizeshift: u8,
+        /// The nonces
+        pub nonces: Vec<u64>,
     }
 
 

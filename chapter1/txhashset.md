@@ -37,6 +37,8 @@ pub struct TxHashSet {
 }
 ```
 
+和下面的 Extension 差不多，只不过它更加具体一点，因为它所使用的 PMMRHandle 本身已经包含 PMMRBackend，所以这里不用指定。
+
 #### OutputIdentifier
 
 ```rust
