@@ -45,11 +45,17 @@ excess 对应 k1G
 
 ## verify 验证
 
-fee + lock\_height 是消息
+这里特指密码学上的验证。
 
-excess\_sig 是签名
+```
+    /// Verify the transaction proof validity. Entails handling the commitment
+    /// as a public key and checking the signature verifies with the fee as
+    /// message.
+```
 
-excess 是公钥
+fee 和 lock\_height 做为消息，excess\_sig 做为签名，excess 做为公钥，用的是 secp 相关算法。
 
-用的是 secp 相关算法。
+上面几个要素，已经完全符合密码学里“验证”条件。
+
+
 
