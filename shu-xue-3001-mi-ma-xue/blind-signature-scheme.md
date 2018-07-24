@@ -1,4 +1,4 @@
-## Blind Signature Scheme
+## Blind Signature
 
 In cryptography, blinding is a technique by which an agent can provide a service to \(i.e., compute a function for\) a client in an encoded form without knowing either the real input or the real output.
 
@@ -15,6 +15,4 @@ Alice 消息：m（不需要对外公布）
 Bob 私钥：b
 
 通用函数：blind、sign、unblind
-
-
 

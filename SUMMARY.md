@@ -68,7 +68,7 @@
   * [BLAKE2](shu-xue-3001-mi-ma-xue/blake2.md)
   * [keychain](shu-xue-3001-mi-ma-xue/keychain.md)
   * [Cuckoo](shu-xue-3001-mi-ma-xue/cuckoo.md)
-  * [Blind Signature Scheme](shu-xue-3001-mi-ma-xue/blind-signature-scheme.md)
+  * [Blind Signature](shu-xue-3001-mi-ma-xue/blind-signature-scheme.md)
 * [区块链工程学](qu-kuai-lian-gong-cheng-xue.md)
   * [交易流程图](qu-kuai-lian-gong-cheng-xue/jiao-yi-liu-cheng-tu.md)
 
