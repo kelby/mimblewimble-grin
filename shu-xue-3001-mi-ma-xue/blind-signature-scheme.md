@@ -8,5 +8,13 @@ In cryptography, blinding is a technique by which an agent can provide a service
 * Alice then unblinds the message using **b**, resulting in **unblind\(sign\(blind\(m,b\),d\),b\)**
 * The functions are designed so that this reduces to **sign\(m,d\)**, i.e. Bob's signature on **m**
 
+Alice 盲化因子：b
+
+Alice 消息：m（不需要对外公布）
+
+Bob 私钥：b
+
+通用函数：blind、sign、unblind
+
 
 
