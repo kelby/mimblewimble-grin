@@ -107,6 +107,12 @@ kernel\_offsets
 #### offset
 
 ```
+			// tx has an offset k2 where k = k1 + k2
+			// and the tx is signed using k1
+			// the kernel excess is k1G
+```
+
+```
 sum := BlindSum::new()
 
 blind_sum = ctx.keychain.blind_sum(&sum)?
@@ -118,6 +124,17 @@ k2 = split.blind_2
 // store the kernel offset (k2) on the tx itself
 // commitments will sum correctly when including the offset
 tx.offset = k2.clone()
+```
+
+split 介绍
+
+```
+	/// Split a blinding_factor (aka secret_key) into a pair of
+	/// blinding_factors. We use one of these (k1) to sign the tx_kernel (k1G)
+	/// and the other gets aggregated in the block_header as the "offset".
+	/// This prevents an actor from being able to sum a set of inputs, outputs
+	/// and kernels from a block to identify and reconstruct a particular tx
+	/// from a block. You would need both k1, k2 to do this.
 ```
 
 
