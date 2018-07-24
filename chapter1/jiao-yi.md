@@ -104,5 +104,21 @@ kernel\_offsets
 
 有这 4 者就能重新创建一个交易。可以将原来多个交易，合并成一个！
 
+#### offset
+
+```
+sum := BlindSum::new()
+
+blind_sum = ctx.keychain.blind_sum(&sum)?
+
+split = blind_sum.split(&keychain.secp())?
+k1 = split.blind_1
+k2 = split.blind_2
+
+// store the kernel offset (k2) on the tx itself
+// commitments will sum correctly when including the offset
+tx.offset = k2.clone()
+```
+
 
 
