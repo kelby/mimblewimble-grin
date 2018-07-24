@@ -34,18 +34,6 @@ List of kernels that make up this transaction \(usually a single kernel\).
 
 The kernel "offset" k2 excess is k1G after splitting the key k = k1 + k2
 
-## 校验
-
-Verification of zero sums. 输入与输出之差为0，不能额外产生或者销毁。
-
-Possession of private keys. 确保私钥的拥有者才能发起交易。
-
-```
-    /// Validates all relevant parts of a fully built transaction. Checks the
-    /// excess value against the signature as well as range proofs for each
-    /// output.
-```
-
 ## A Grin transaction consists of the following
 
 * A set of inputs, each referencing a previous output being spent.
@@ -77,15 +65,15 @@ Possession of private keys. 确保私钥的拥有者才能发起交易。
 
 Slate（核心业务。用于构建交易所需的公开数据）
 
-## fee
+#### fee
 
 是下面所有 kernels 的手续费（fee）之和
 
-## lock\_height
+#### lock\_height
 
 下面所有 kernels 的被锁高度（lock\_height）取最大值
 
-## 合并 aggregate
+#### 合并 aggregate
 
 ```
 /// Aggregate a vec of transactions into a multi-kernel transaction with
@@ -135,6 +123,18 @@ split 介绍
     /// This prevents an actor from being able to sum a set of inputs, outputs
     /// and kernels from a block to identify and reconstruct a particular tx
     /// from a block. You would need both k1, k2 to do this.
+```
+
+#### 校验
+
+Verification of zero sums. 输入与输出之差为0，不能额外产生或者销毁。
+
+Possession of private keys. 确保私钥的拥有者才能发起交易。
+
+```
+    /// Validates all relevant parts of a fully built transaction. Checks the
+    /// excess value against the signature as well as range proofs for each
+    /// output.
 ```
 
 ## wallet libtx
