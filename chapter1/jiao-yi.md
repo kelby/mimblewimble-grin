@@ -104,3 +104,21 @@ kernel\_offsets
 
 有这 4 者就能重新创建一个交易。可以将原来多个交易，合并成一个！
 
+#### verify
+
+```
+	/// Verify the transaction proof validity. Entails handling the commitment
+	/// as a public key and checking the signature verifies with the fee as
+	/// message.
+```
+
+fee 和 lock\_height 做为消息。
+
+excess\_sig 做为签名。
+
+excess 做为公钥。
+
+上面几个要素，已经完全符合密码学里“验证”条件。
+
+
+
