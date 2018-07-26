@@ -20,6 +20,7 @@
   * [BlockHeader](chapter1/blockheader.md)
   * [Committed](chapter1/committed.md)
   * [交易 Transaction](chapter1/jiao-yi.md)
+    * [libtx build](chapter1/jiao-yi/libtx-build.md)
   * [输入 Input](chapter1/shu-ru.md)
   * [输出 Output](chapter1/shu-chu.md)
   * [TxKernel](chapter1/txkernel.md)
@@ -70,6 +71,8 @@
   * [keychain](shu-xue-3001-mi-ma-xue/keychain.md)
   * [Cuckoo](shu-xue-3001-mi-ma-xue/cuckoo.md)
   * [Blind Signature](shu-xue-3001-mi-ma-xue/blind-signature-scheme.md)
+  * [libtx aggsig](shu-xue-3001-mi-ma-xue/libtx-aggsig.md)
+  * [libtx proof](shu-xue-3001-mi-ma-xue/libtx-proof.md)
 * [区块链工程学](qu-kuai-lian-gong-cheng-xue.md)
   * [交易流程图](qu-kuai-lian-gong-cheng-xue/jiao-yi-liu-cheng-tu.md)
 
