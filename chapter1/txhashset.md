@@ -16,6 +16,8 @@ commit\_index ChainStore
 
 ## TxHashSet
 
+主要是关联 PMMRHandle 和 TxKernel 对象。
+
 ```rust
 /// An easy to manipulate structure holding the 3 sum trees necessary to
 /// validate blocks and capturing the Output set, the range proofs and the
@@ -28,12 +30,12 @@ commit\_index ChainStore
 /// pruning enabled.
 
 pub struct TxHashSet {
-    output_pmmr_h: PMMRHandle<OutputIdentifier>,
-    rproof_pmmr_h: PMMRHandle<RangeProof>,
-    kernel_pmmr_h: PMMRHandle<TxKernel>,
+    output_pmmr_h: PMMRHandle<OutputIdentifier>, // 输入、输出通用唯一标识
+    rproof_pmmr_h: PMMRHandle<RangeProof>, // 密码学里的 RangeProof
+    kernel_pmmr_h: PMMRHandle<TxKernel>, // 交易元数据、公钥、签名
 
     // chain store used as index of commitments to MMR positions
-    commit_index: Arc<ChainStore>,
+    commit_index: Arc<ChainStore>, // 存储（关联对象）
 }
 ```
 

@@ -21,7 +21,7 @@ pub struct Chain {
 
     head: Arc<Mutex<Tip>>, // 基本信息（数据）
     orphans: Arc<OrphanBlockPool>, // 孤儿，分叉链管理（关联对象）
-    txhashset: Arc<RwLock<txhashset::TxHashSet>>, // 关键信息（数据）
+    txhashset: Arc<RwLock<txhashset::TxHashSet>>, // 关键信息（关联对象）
     // Recently processed blocks to avoid double-processing
     block_hashes_cache: Arc<RwLock<VecDeque<Hash>>>,
 }
