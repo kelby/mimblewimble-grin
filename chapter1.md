@@ -12,5 +12,9 @@ GitBook allows you to organize your book into chapters, each chapter is stored i
 
 理论基础
 
+区块链通用关系：
+
+链 &gt; 区块 &gt; 交易 &gt; UTXO
+
 
 
