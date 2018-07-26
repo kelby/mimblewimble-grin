@@ -16,8 +16,8 @@ where
     B: 'a + Backend<T>,
 {
     /// The last position in the PMMR
-    pub last_pos: u64,
-    backend: &'a mut B,
+    pub last_pos: u64, // 数据
+    backend: &'a mut B, // 关联对象
     // only needed to parameterise Backend
     _marker: marker::PhantomData<T>,
 }
@@ -63,15 +63,15 @@ validate
 
 ## PMMRHandle
 
-通过 PMMRHandle 提供给 TxHashSet 使用，进而影响整个系统。
+和具体业务无关的一种数据存储。通过 PMMRHandle 提供给 TxHashSet 使用，进而影响整个系统。
 
 ```
 struct PMMRHandle<T>
 where
     T: PMMRable,
 {
-    backend: PMMRBackend<T>,
-    last_pos: u64,
+    backend: PMMRBackend<T>, // 关联对象
+    last_pos: u64, // 数据
 }
 ```
 
