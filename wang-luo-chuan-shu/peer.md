@@ -44,8 +44,8 @@ pub struct PeerInfo {
 
 ```
 pub struct Protocol {
-	adapter: Arc<NetAdapter>,
-	addr: SocketAddr,
+    adapter: Arc<NetAdapter>,
+    addr: SocketAddr,
 }
 ```
 
@@ -55,8 +55,8 @@ pub struct Protocol {
 /// A message as received by the connection. Provides access to the message
 /// header lazily consumes the message body, handling its deserialization.
 pub struct Message<'a> {
-	pub header: MsgHeader,
-	conn: &'a mut TcpStream,
+    pub header: MsgHeader,
+    conn: &'a mut TcpStream,
 }
 ```
 
@@ -64,11 +64,29 @@ pub struct Message<'a> {
 
     /// Response to a `Message`
     pub struct Response<'a> {
-    	resp_type: Type,
-    	body: Vec<u8>,
-    	conn: &'a mut TcpStream,
-    	attachment: Option<File>,
+        resp_type: Type,
+        body: Vec<u8>,
+        conn: &'a mut TcpStream,
+        attachment: Option<File>,
     }
+
+#### Tracker
+
+```
+// TODO count sent and received
+pub struct Tracker {
+	/// Bytes we've sent.
+	pub sent_bytes: Arc<Mutex<u64>>,
+	/// Bytes we've received.
+	pub received_bytes: Arc<Mutex<u64>>,
+	/// Channel to allow sending data through the connection
+	pub send_channel: mpsc::SyncSender<Vec<u8>>,
+	/// Channel to close the connection
+	pub close_channel: mpsc::Sender<()>,
+	/// Channel to check for errors on the connection
+	pub error_channel: mpsc::Receiver<Error>,
+}
+```
 
 
 

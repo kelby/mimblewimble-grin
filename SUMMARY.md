@@ -47,6 +47,7 @@
     * [WalletBackend 和 WalletClient](api3001-ke-hu-duan/qian-bao-cli/walletbackend-he-walletclient.md)
     * [TX](api3001-ke-hu-duan/qian-bao-cli/tx.md)
     * [internal](api3001-ke-hu-duan/qian-bao-cli/internal.md)
+  * [stats](api3001-ke-hu-duan/stats.md)
 * [网络传输](wang-luo-chuan-shu.md)
   * [Dandelion](wang-luo-chuan-shu/dandelion.md)
   * [P2P](wang-luo-chuan-shu/p2p.md)

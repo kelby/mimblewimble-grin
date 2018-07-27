@@ -1,3 +1,5 @@
+关系：Server &gt; Peers &gt; Peer
+
 ## Server
 
 ```rust
@@ -11,8 +13,6 @@ pub struct Server {
     stop: Arc<AtomicBool>,
 }
 ```
-
-#### Server &gt; Peers &gt; Peer
 
 #### Handshake
 
