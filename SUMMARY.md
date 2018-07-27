@@ -19,13 +19,19 @@
   * [区块](chapter1/xxx.md)
   * [BlockHeader](chapter1/blockheader.md)
   * [Committed](chapter1/committed.md)
-  * [交易 Transaction](chapter1/jiao-yi.md)
+  * [Transaction building](chapter1/jiao-yi/transaction-building.md)
+    * [libwallet tx](chapter1/jiao-yi/internal-tx.md)
+    * [libtx slate](chapter1/jiao-yi/libtx-slate.md)
     * [libtx build](chapter1/jiao-yi/libtx-build.md)
     * [libtx tx\_fee](chapter1/jiao-yi/libtx-mod.md)
+    * [libwallet selection](chapter1/jiao-yi/libwalletinternalselection.md)
+    * libwallet sigcontext
+    * libwallet updater
+    * [libtx aggsig](chapter1/jiao-yi/libtx-aggsig.md)
+    * libtx proof
+    * [libwallet keys](chapter1/jiao-yi/libwallet-keys.md)
     * [libtx reward](chapter1/jiao-yi/libtx-reward.md)
-    * [libtx slate](chapter1/jiao-yi/libtx-slate.md)
-    * [internal tx](chapter1/jiao-yi/internal-tx.md)
-    * [Transaction building](chapter1/jiao-yi/transaction-building.md)
+  * [交易 Transaction](chapter1/jiao-yi.md)
   * [输入 Input](chapter1/shu-ru.md)
   * [输出 Output](chapter1/shu-chu.md)
   * [TxKernel](chapter1/txkernel.md)
