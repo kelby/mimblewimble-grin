@@ -28,7 +28,7 @@
     * libwallet sigcontext
     * libwallet updater
     * [libtx aggsig](chapter1/jiao-yi/libtx-aggsig.md)
-    * libtx proof
+    * [libtx proof](chapter1/jiao-yi/libtx-proof.md)
     * [libwallet keys](chapter1/jiao-yi/libwallet-keys.md)
     * [libtx reward](chapter1/jiao-yi/libtx-reward.md)
   * [交易 Transaction](chapter1/jiao-yi.md)
