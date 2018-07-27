@@ -53,26 +53,26 @@ OutputData
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, PartialOrd, Eq, Ord)]
 pub struct OutputData {
-	/// Root key_id that the key for this output is derived from
-	pub root_key_id: Identifier,
-	/// Derived key for this output
-	pub key_id: Identifier,
-	/// How many derivations down from the root key
-	pub n_child: u32,
-	/// Value of the output, necessary to rebuild the commitment
-	pub value: u64,
-	/// Current status of the output
-	pub status: OutputStatus,
-	/// Height of the output
-	pub height: u64,
-	/// Height we are locked until
-	pub lock_height: u64,
-	/// Is this a coinbase output? Is it subject to coinbase locktime?
-	pub is_coinbase: bool,
-	/// Hash of the block this output originated from.
-	pub block: Option<BlockIdentifier>,
-	/// Merkle proof
-	pub merkle_proof: Option<MerkleProofWrapper>,
+    /// Root key_id that the key for this output is derived from
+    pub root_key_id: Identifier,
+    /// Derived key for this output
+    pub key_id: Identifier,
+    /// How many derivations down from the root key
+    pub n_child: u32,
+    /// Value of the output, necessary to rebuild the commitment
+    pub value: u64,
+    /// Current status of the output
+    pub status: OutputStatus,
+    /// Height of the output
+    pub height: u64,
+    /// Height we are locked until
+    pub lock_height: u64,
+    /// Is this a coinbase output? Is it subject to coinbase locktime?
+    pub is_coinbase: bool,
+    /// Hash of the block this output originated from.
+    pub block: Option<BlockIdentifier>,
+    /// Merkle proof
+    pub merkle_proof: Option<MerkleProofWrapper>,
 }
 ```
 
@@ -216,4 +216,34 @@ FileWallet &gt; WalletBackend/WalletClient &gt; OwnerAPIGetHandler/OwnerAPIPostH
 FileWallet &gt; client
 
 FileWallet &gt; TX
+
+#### 其它 restore
+
+Functions to restore a wallet's outputs from just the master seed
+
+Restore a wallet
+
+```
+/// Utility struct for return values from below
+struct OutputResult {
+	///
+	pub commit: pedersen::Commitment,
+	///
+	pub key_id: Option<Identifier>,
+	///
+	pub n_child: Option<u32>,
+	///
+	pub value: u64,
+	///
+	pub height: u64,
+	///
+	pub lock_height: u64,
+	///
+	pub is_coinbase: bool,
+	///
+	pub blinding: SecretKey,
+}
+```
+
+
 
