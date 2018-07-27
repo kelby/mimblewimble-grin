@@ -24,6 +24,7 @@
     * [libtx mod](chapter1/jiao-yi/libtx-mod.md)
     * [libtx reward](chapter1/jiao-yi/libtx-reward.md)
     * [libtx slate](chapter1/jiao-yi/libtx-slate.md)
+    * [internal tx](chapter1/jiao-yi/internal-tx.md)
   * [输入 Input](chapter1/shu-ru.md)
   * [输出 Output](chapter1/shu-chu.md)
   * [TxKernel](chapter1/txkernel.md)
