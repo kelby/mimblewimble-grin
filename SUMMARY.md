@@ -25,8 +25,8 @@
     * [libtx build](chapter1/jiao-yi/libtx-build.md)
     * [libtx tx\_fee](chapter1/jiao-yi/libtx-mod.md)
     * [libwallet selection](chapter1/jiao-yi/libwalletinternalselection.md)
-    * libwallet sigcontext
-    * libwallet updater
+    * [libwallet sigcontext](chapter1/jiao-yi/libwallet-sigcontext.md)
+    * [libwallet updater](chapter1/jiao-yi/libwallet-updater.md)
     * [libtx aggsig](chapter1/jiao-yi/libtx-aggsig.md)
     * [libtx proof](chapter1/jiao-yi/libtx-proof.md)
     * [libwallet keys](chapter1/jiao-yi/libwallet-keys.md)
@@ -54,8 +54,6 @@
     * [FileWallet](api3001-ke-hu-duan/qian-bao-cli/filewallet.md)
     * [LMDBBackend 和 Batch](api3001-ke-hu-duan/qian-bao-cli/lmdbbackend-he-batch.md)
     * [WalletBackend 和 WalletClient](api3001-ke-hu-duan/qian-bao-cli/walletbackend-he-walletclient.md)
-    * [TX](api3001-ke-hu-duan/qian-bao-cli/tx.md)
-    * [internal](api3001-ke-hu-duan/qian-bao-cli/internal.md)
 * [网络传输](wang-luo-chuan-shu.md)
   * [Dandelion](wang-luo-chuan-shu/dandelion.md)
   * [P2P](wang-luo-chuan-shu/p2p.md)
@@ -83,8 +81,6 @@
   * [keychain](shu-xue-3001-mi-ma-xue/keychain.md)
   * [Cuckoo](shu-xue-3001-mi-ma-xue/cuckoo.md)
   * [Blind Signature](shu-xue-3001-mi-ma-xue/blind-signature-scheme.md)
-  * [libtx aggsig](shu-xue-3001-mi-ma-xue/libtx-aggsig.md)
-  * [libtx proof](shu-xue-3001-mi-ma-xue/libtx-proof.md)
 * [区块链工程学](qu-kuai-lian-gong-cheng-xue.md)
   * [交易流程图](qu-kuai-lian-gong-cheng-xue/jiao-yi-liu-cheng-tu.md)
 
