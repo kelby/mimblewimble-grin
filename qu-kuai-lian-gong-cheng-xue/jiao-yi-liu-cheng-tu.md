@@ -1,3 +1,7 @@
+整个过程，发送方、接收方均需要两对私钥参与。
+
+该过程，不是零交互的。
+
 ## 发送方初始化
 
 1: Create Transaction \*\***UUID**\*\* \(for reference and maintaining correct state\)
