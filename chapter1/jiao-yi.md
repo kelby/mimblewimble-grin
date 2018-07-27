@@ -1,3 +1,5 @@
+In MimbleWimble, in order to prove ownership of the UTXO you have to know the blinding factor and the amount of the UTXO.
+
 ## Transaction
 
 输入是输出的简单引用，输出包含了交易金额，TxKernel 包含了手续费和签名。
