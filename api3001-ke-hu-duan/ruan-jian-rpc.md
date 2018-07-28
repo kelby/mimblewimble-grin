@@ -45,21 +45,25 @@ pool
 
 peers
 
-> /// Start all server HTTP handlers. Register all of them with Iron
->
-> /// and runs the corresponding HTTP server.
->
-> ///
->
-> /// Hyper currently has a bug that prevents clean shutdown. In order
->
-> /// to avoid having references kept forever by handlers, we only pass
->
-> /// weak references. Note that this likely means a crash if the handlers are
->
-> /// used after a server shutdown \(which should normally never happen,
->
-> /// except during tests\).
+```
+/// Start all server HTTP handlers. Register all of them with Iron
+
+/// and runs the corresponding HTTP server.
+
+///
+
+/// Hyper currently has a bug that prevents clean shutdown. In order
+
+/// to avoid having references kept forever by handlers, we only pass
+
+/// weak references. Note that this likely means a crash if the handlers are
+
+/// used after a server shutdown (which should normally never happen,
+
+/// except during tests).
+```
+
+## handlers
 
 ```rust
 /// Gets block details given either a hash or height.
