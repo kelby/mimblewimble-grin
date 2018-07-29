@@ -21,7 +21,7 @@
   * [Committed](chapter1/committed.md)
   * [交易 Transaction](chapter1/jiao-yi.md)
     * [交易流程图](qu-kuai-lian-gong-cheng-xue/jiao-yi-liu-cheng-tu.md)
-  * [转账交易](chapter1/jiao-yi/transaction-building.md)
+  * [转账](chapter1/jiao-yi/transaction-building.md)
     * [libwallet tx](chapter1/jiao-yi/internal-tx.md)
     * [libtx slate](chapter1/jiao-yi/libtx-slate.md)
     * [libtx build](chapter1/jiao-yi/libtx-build.md)
