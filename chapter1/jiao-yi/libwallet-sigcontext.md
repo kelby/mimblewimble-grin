@@ -19,15 +19,47 @@ pub struct Context {
 
 new
 
+```
+/// Create a new context with defaults
+```
+
 add\_output
+
+```
+	/// Tracks an output contributing to my excess value (if it needs to
+	/// be kept between invocations
+```
 
 get\_outputs
 
+```
+/// Returns all stored outputs
+```
+
 add\_input
+
+```
+	/// Tracks IDs of my inputs into the transaction
+	/// be kept between invocations
+```
 
 get\_inputs
 
+```
+/// Returns all stored input identifiers
+```
+
 get\_private\_keys
 
+```
+/// Returns private key, private nonce
+```
+
 get\_public\_keys
+
+```
+/// Returns public key, public nonce
+```
+
+
 
