@@ -33,6 +33,7 @@
     * [libtx proof](chapter1/jiao-yi/libtx-proof.md)
     * [libwallet keys](chapter1/jiao-yi/libwallet-keys.md)
     * [libtx reward](chapter1/jiao-yi/libtx-reward.md)
+    * [libwallet types](chapter1/jiao-yi/libwallet-types.md)
   * [输入 Input](chapter1/shu-ru.md)
   * [输出 Output](chapter1/shu-chu.md)
   * [TxKernel](chapter1/txkernel.md)
