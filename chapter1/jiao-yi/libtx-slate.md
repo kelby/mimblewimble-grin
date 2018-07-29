@@ -57,11 +57,37 @@ is\_complete
 
 blank
 
+```
+/// Create a new slate
+```
+
 add\_transaction\_elements
+
+```
+	/// Adds selected inputs and outputs to the slate's transaction
+	/// Returns blinding factor
+```
 
 fill\_round\_1
 
+```
+	/// Completes callers part of round 1, adding public key info
+	/// to the slate
+```
+
 fill\_round\_2
 
+```
+/// Completes caller's part of round 2, completing signatures
+```
+
 finalize
+
+```
+	/// Creates the final signature, callable by either the sender or recipient
+	/// (after phase 3: sender confirmation)
+	/// TODO: Only callable by receiver at the moment
+```
+
+
 
