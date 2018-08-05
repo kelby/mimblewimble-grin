@@ -45,7 +45,7 @@
   * [3 个验证](chapter1/3-ge-zheng-ming.md)
   * [其它](chapter1/qi-ta.md)
   * [adapters](wang-luo-chuan-shu/adapters.md)
-* [API/客户端](api3001-ke-hu-duan.md)
+* [API/客户端/服务端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
   * [软件CMD](api3001-ke-hu-duan/ruan-jian-cmd.md)
   * [挖矿](api3001-ke-hu-duan/wa-kuang-ruan-jian.md)
