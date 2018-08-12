@@ -47,6 +47,7 @@
   * [adapters](wang-luo-chuan-shu/adapters.md)
 * [API/客户端/服务端](api3001-ke-hu-duan.md)
   * [软件RPC](api3001-ke-hu-duan/ruan-jian-rpc.md)
+    * [软件 RPC struct](api3001-ke-hu-duan/ruan-jian-rpc/ruan-jian-rpc-struct.md)
   * [软件CMD](api3001-ke-hu-duan/ruan-jian-cmd.md)
   * [挖矿](api3001-ke-hu-duan/wa-kuang-ruan-jian.md)
   * [矿池](api3001-ke-hu-duan/kuang-chi.md)
